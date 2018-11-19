@@ -1,0 +1,272 @@
+@charset "UTF-8";
+*{margin: 0px; padding: 0px;font-family: "微软雅黑";}
+a{
+	display: inline-block;text-decoration: none;
+	-webkit-tap-highlight-color:transparent;
+}
+i{display: inline-block;}
+li{list-style: none;float: left;}
+@num: 37.5rem;
+     body{
+     	height: 812/@num;
+     	overflow: hidden;
+     }
+	.search{
+		width: 100%;
+		height: 45/@num;
+		display: flex;
+		align-items:center;
+		justify-content: space-around;
+		border-bottom: 1px solid #999;
+		z-index: 99;
+		box-sizing: border-box;
+
+		.back{
+			height: 20/@num;width: 20/@num;
+			background: url(../img/back.png) no-repeat;
+			background-size: contain;
+		}
+		div{
+			width: 270/@num;height: 30/@num;
+			display: flex;
+			justify-content: center;
+			align-items:center;
+			border-radius: 20/@num;
+			background: #F7F7F7;
+
+			i{
+				width: 20/@num;height: 20/@num;
+				background: url(../img/jd-sprites.png) no-repeat;
+				background-position: -80/@num 3/@num;
+				background-size: 200/@num;
+			}
+			input{
+				height: 20/@num;width: 220/@num;
+				border: none;
+				font-size: 12/@num;
+				background: #F7F7F7;
+				text-indent: 0.2rem;
+			}
+		}
+		.menu{
+			width: 20/@num;height: 20/@num;
+			background: url(../img/menu.png) no-repeat center;
+			background-size: contain;
+		}
+	}
+    
+    // 底部菜单
+	.footmenu{
+		width: 100%;height:50/@num;
+		position: fixed; 
+		bottom: 0px;
+		display: flex;
+		background: #fff;
+		border: 1px solid rgba(108, 108, 108,0.3);
+		box-shadow: 0 0 10/@num 0 hsla(0,6%,58%,.6);
+		z-index: 99;
+		a{
+			width: 20%;height: 100%;
+			div{
+				text-align: center;
+				img{
+					width: 60/@num;height: 46/@num;
+				}
+				.bigmenu{
+					width: 60/@num;height: 60/@num;
+					margin-top: -15/@num;
+				}
+			}
+		}
+	}
+   .menuContain{
+   	 	width: 100%;
+
+        overflow: hidden;
+
+        .contain{
+        	width: 85/@num;height: 100%;
+        	float: left;
+        	overflow: hidden;
+
+        }
+   	 	.leftMenuContain{
+   	 		width: 90/@num;height: 100%;
+   	 		
+   	 		overflow:scroll;
+			overflow-x:hidden;
+
+   	 		.leftMenu{
+   	 			height: 1620/@num;
+				background: #F8F8F8;
+				width: 85/@num;
+				
+   	 			.publicLi{
+   	 				width: 100%;height: 45/@num;
+   	 				display: flex;
+   	 				a{
+   	 					text-align: center;
+   	 					width:84/@num;height: 100%;
+   	 					line-height: 45/@num;
+   	 					color: #111;
+   	 					font-size: 14/@num;
+   	 					// -moz-user-focus: none;
+   	 					// -moz-user-select: none;
+   	 					// user-focus: none;
+   	 					// user-select: none;
+   	 					-webkit-tap-highlight-color:transparent;
+
+   	 					::selection {
+							background: #FFF;
+							color: #333;
+						}
+						::-moz-selection {
+							background: #FFF;
+							color: #333;
+						}
+						::-webkit-selection {
+							background: #FFF;
+							color: #333;
+						}
+   	 				}
+   	 				#static1{
+   	 					color: #E93B3D;
+   	 					background: #fff;
+   	 				}
+   	 			}
+   	 		}
+   	 	}
+   }
+   @keyframes touming{
+   	from{opacity:0};
+   	to{opacity: 1};
+   }
+   .rightContain{
+	   	width: 290/@num;height: 100%;
+	   	float: right;
+	   	overflow: hidden;
+
+		.rightMenuContain{
+			width: 295/@num;height: 100%;
+			overflow:scroll;
+			overflow-x:hidden;
+
+			.publayout{
+				width: 290/@num;height: 600/@num;
+				display: none;
+                animation:touming 0.5s linear;
+
+                .title{
+                	display: flex;
+                	align-items:center;
+                	justify-content:space-between;
+                	width: 270/@num;
+                	margin: 0px auto;
+                	margin-top: 15/@num;
+                	h3{
+					font-size: 14/@num;
+					display: inline-block;
+					width: 240/@num;
+					}
+				a{
+					float: right;
+					width: 80/@num;
+					height: 14/@num;
+					display: flex;
+					align-items:center;
+                	justify-content:space-between;
+					.rank_icon{
+						width: 12/@num;height: 12/@num;
+						background: url(../img/rank.png) no-repeat;
+						background-size: cover;
+						
+					}
+					span{font-size: 12/@num;color: #666;}
+					.right_arrow{
+						width: 12/@num;height: 12/@num;
+						background: url(../img/rightarrow.png) no-repeat;
+						background-size: contain;
+						}
+					}
+				}
+                .bigimg{
+                	width: 100%;height: 94/@num;padding: 6/@num;
+                	a{width: 100%;height: 100%;}
+					img{
+						width: 277/@num;height: 100%;
+						
+					}
+                }
+				ul{
+					width: 100%;
+                    margin-top: 10/@num;
+                    padding-left: 13/@num;
+					li{
+						width:90/@num;height: 107/@num;
+						a{
+							width: 100%;height: 100%;
+							display: flex;
+							flex-direction:column;
+							align-items:center;
+							img{
+								width: 70/@num;height: 70/@num;
+							}
+							span{font-size: 12/@num;color: #333;}
+						}
+					}
+				}
+				.firstUl{height: 107/@num;}
+				.secondUl{height: 214/@num;}
+				.thirdUl{height: 321/@num;}
+				.fourthUl{height: 428/@num;}
+				.fifthUl{height: 535/@num;}
+				.sixthUl{height: 642/@num;}
+				.eightUl{height: 856/@num;}
+			}
+			#page1{display: block;}
+		}
+   }
+
+   // 窗口菜单
+   .windowMenu{
+   		position: absolute;
+   		top: 52/@num;
+   		right: 10/@num;
+   		width: 125/@num;height: 200/@num;
+   		background: rgba(0,0,0,.9); 
+   		border-radius: 5/@num; 
+   		display: none;
+   		z-index: 99;
+
+   		li{
+   			height: 40/@num;width: 100%;
+   			border-bottom: 1px solid #999;   			
+   			box-sizing: border-box;
+			
+			a{
+				display: block;
+				height: 100%;
+				color: #fff;
+				font-size: 14/@num;
+				display: flex;
+				justify-content: center;
+				align-items:center;
+				img{
+					width: 15/@num;height: 15/@num;
+				}
+				span{
+					width: 70/@num;
+					margin-left: 10/@num;
+				}
+			}
+   		}
+   }
+   .windowMenu:before{
+   		content: "";
+   		position: absolute;
+   		top: -5/@num;
+   		right: 8/@num;
+   		border-bottom: 5/@num solid rgba(0,0,0,.9);
+   		border-left: 5/@num solid transparent;
+   		border-right: 5/@num solid transparent;
+   }

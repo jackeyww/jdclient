@@ -1,0 +1,933 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "微软雅黑";
+}
+i {
+  display: inline-block;
+}
+span {
+  display: inline-block;
+}
+li {
+  list-style: none;
+  float: left;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  margin-bottom: 1.6rem;
+}
+.head {
+  width: 100%;
+  height: 1.2rem;
+  position: fixed;
+  z-index: 99;
+}
+.head .headcontain {
+  width: 9.2rem;
+  height: 100%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head .headcontain .menu {
+  width: 0.53333333rem;
+  height: 0.48rem;
+  background: url(../img/indexmenu.png) no-repeat;
+  background-size: contain;
+}
+.head .headcontain div {
+  width: 7.33333333rem;
+  height: 0.8rem;
+  background: #fff;
+  border-radius: 0.53333333rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.head .headcontain div .logo {
+  width: 0.53333333rem;
+  height: 0.42666667rem;
+  background: url(../img/logo.png) no-repeat;
+  background-size: contain;
+  margin-left: 0.4rem;
+}
+.head .headcontain div .logo:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 0.4rem;
+  background: #666;
+  left: 1.2rem;
+}
+.head .headcontain div .search {
+  width: 0.53333333rem;
+  height: 0.53333333rem;
+  background: url(../img/jd-sprites.png) no-repeat;
+  background-position: -2.13333333rem 0.08rem;
+  background-size: 5.33333333rem;
+  margin-left: 0.4rem;
+}
+.head .headcontain .login {
+  font-size: 0.37333333rem;
+  color: #fff;
+}
+.head .headcontain input {
+  width: 4.53333333rem;
+  height: 0.48rem;
+  font-size: 0.32rem;
+  line-height: 0.48rem;
+  border: none;
+  margin-left: 0.13333333rem;
+  padding-left: 0.13333333rem;
+}
+.swiper-container {
+  width: 100%;
+  height: 4.8rem;
+}
+.swiper-container .swiper-pagination {
+  font-size: 0.53333333rem;
+}
+.swiper-container img {
+  width: 100%;
+  height: 100%;
+}
+#white {
+  bottom: 3px;
+}
+#white > .swiper-pagination-bullet {
+  width: 0.13333333rem;
+  height: 0.13333333rem;
+  border: 0.02666667rem solid #fff;
+  border-radius: 50%;
+  opacity: 1;
+  background: none;
+  margin-left: 0.13333333rem;
+}
+#white > .swiper-pagination-bullet-active {
+  background: #fff;
+}
+.menubg {
+  width: 100%;
+  height: 3.06666667rem;
+}
+.menubg img {
+  width: 100%;
+  height: 100%;
+}
+.mainMenu {
+  height: 4.26666667rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.mainMenu ul {
+  width: 100%;
+  height: 1.86666667rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.mainMenu ul li {
+  width: 2rem;
+  height: 1.6rem;
+}
+.mainMenu ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+}
+.mainMenu ul li a img {
+  width: 1.06666667rem;
+  height: 1.06666667rem;
+}
+.mainMenu ul li a p {
+  font-size: 0.32rem;
+}
+.jdnews {
+  width: 100%;
+  height: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jdnews .news {
+  width: 1.81333333rem;
+  height: 0.42666667rem;
+  background: url(../img/jdnews.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.jdnews div {
+  display: flex;
+  width: 6.66666667rem;
+  height: 100%;
+  font-size: 0.32rem;
+  align-items: center;
+}
+.jdnews div span {
+  width: 0.8rem;
+  color: #F23434;
+}
+.jdnews div p {
+  width: 5.6rem;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.jdnews .more {
+  font-size: 0.34666667rem;
+  color: #333;
+  position: relative;
+}
+.jdnews .more:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 0.4rem;
+  background: #666;
+  left: -0.13333333rem;
+}
+.everyday {
+  width: 100%;
+  height: 3.2rem;
+  display: flex;
+}
+.everyday .img1 {
+  width: 50%;
+  height: 100%;
+  background: url(../img/choujiang.jpg.dpg) no-repeat;
+  background-size: contain;
+  border-right: 1px solid #999;
+  box-sizing: border-box;
+}
+.everyday .img2 {
+  width: 25%;
+  height: 100%;
+  background: url(../img/baoyou.jpg.dpg) no-repeat;
+  background-size: contain;
+  border-right: 1px solid #999;
+  box-sizing: border-box;
+}
+.everyday .img3 {
+  width: 25%;
+  height: 100%;
+  background: url(../img/fuli.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.miaosha {
+  width: 100%;
+  height: 4.26666667rem;
+  overflow: hidden;
+}
+.miaosha .detail {
+  width: 100%;
+  height: 0.93333333rem;
+  display: flex;
+  justify-content: center;
+}
+.miaosha .detail a {
+  width: 96%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.miaosha .detail a h5 {
+  display: inline-block;
+  font-size: 0.42666667rem;
+  color: #F02B2B;
+}
+.miaosha .detail a h6 {
+  display: inline-block;
+  font-size: 0.32rem;
+  color: #111;
+}
+.miaosha .detail a .time {
+  width: 4.66666667rem;
+  height: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+.miaosha .detail a .time span {
+  font-size: 0.32rem;
+  color: #666;
+  width: 0.42666667rem;
+  height: 0.48rem;
+  text-align: center;
+  line-height: 0.48rem;
+  border: 1px solid rgba(108, 108, 108, 0.3);
+  vertical-align: middle;
+}
+.miaosha .detail a .time small {
+  font-size: 0.34666667rem;
+  color: #666;
+}
+.miaosha .detail a p {
+  font-size: 0.34666667rem;
+  color: #F02B2B;
+  display: inline-block;
+  float: right;
+}
+.miaosha .detail a i {
+  width: 0.29333333rem;
+  height: 0.29333333rem;
+  background: url(../img/arrow_rt.png) no-repeat;
+  background-size: contain;
+}
+.miaosha .scrollMenuContainer {
+  width: 100%;
+  height: 3.46666667rem;
+  overflow-x: scroll;
+}
+.miaosha .scrollMenu {
+  width: 21.86666667rem;
+  height: 3.33333333rem;
+  margin-left: 0.13333333rem;
+}
+.miaosha .scrollMenu li {
+  width: 2.13333333rem;
+  height: 100%;
+}
+.miaosha .scrollMenu li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.miaosha .scrollMenu li a i {
+  width: 1.86666667rem;
+  height: 1.86666667rem;
+}
+.miaosha .scrollMenu li a .scrrow1 {
+  background: url(../img/scrrow1.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.miaosha .scrollMenu li a .scrrow2 {
+  background: url(../img/scrrow2.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.miaosha .scrollMenu li a .scrrow3 {
+  background: url(../img/scrrow3.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.miaosha .scrollMenu li a .scrrow4 {
+  background: url(../img/scrrow4.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.miaosha .scrollMenu li a .scrrow5 {
+  background: url(../img/scrrow5.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.miaosha .scrollMenu li a .scrrow6 {
+  background: url(../img/scrrow6.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.miaosha .scrollMenu li a .scrrow7 {
+  background: url(../img/scrrow7.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.miaosha .scrollMenu li a .scrrow8 {
+  background: url(../img/scrrow8.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.miaosha .scrollMenu li a .scrrow9 {
+  background: url(../img/scrrow9.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.miaosha .scrollMenu li a .scrrow10 {
+  background: url(../img/scrrow10.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.miaosha .scrollMenu li a .newprice {
+  color: #F02B2B;
+  font-size: 0.42666667rem;
+  font-weight: 600;
+}
+.miaosha .scrollMenu li a .newprice span {
+  font-size: 0.34666667rem;
+  font-weight: 100;
+}
+.miaosha .scrollMenu li a .oldprice {
+  color: #666;
+  font-size: 0.34666667rem;
+  text-decoration: line-through;
+}
+.miaosha .scrollMenu li:last-child {
+  width: 0.53333333rem;
+  height: 70%;
+  background: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.miaosha .scrollMenu li:last-child i {
+  width: 0.32rem;
+  height: 0.32rem;
+  background: url(../img/sprite.png) no-repeat;
+  background-position: -2.85333333rem -2.90666667rem;
+  background-size: 5.33333333rem;
+}
+.miaosha .scrollMenu li:last-child p {
+  font-size: 0.32rem;
+}
+.superMarket {
+  width: 100%;
+  height: 7.46666667rem;
+  display: flex;
+  flex-direction: column;
+}
+.superMarket .khuan {
+  width: 100%;
+  height: 3.06666667rem;
+  background: url(../img/kuanghuan.gif) no-repeat;
+  background-size: cover;
+}
+.superMarket .advance {
+  width: 100%;
+  height: 1.06666667rem;
+  background: url(../img/advance.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.superMarket .products {
+  width: 100%;
+  height: 3.46666667rem;
+  display: flex;
+  justify-content: space-between;
+}
+.superMarket .products li {
+  width: 24.5%;
+  height: 100%;
+  background: url(../img/productbg.jpg) no-repeat;
+  background-size: cover;
+}
+.superMarket .products li a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.superMarket .products li a i {
+  width: 1.73333333rem;
+  height: 1.73333333rem;
+  border-radius: 0.26666667rem;
+}
+.superMarket .products li a .pro1 {
+  background: url(../img/product1.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.superMarket .products li a .pro2 {
+  background: url(../img/product2.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.superMarket .products li a .pro3 {
+  background: url(../img/product3.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.superMarket .products li a .pro4 {
+  background: url(../img/product4.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.superMarket .products li a h3 {
+  font-size: 0.45333333rem;
+}
+.superMarket .products li a p {
+  font-size: 0.34666667rem;
+}
+.footmenu {
+  width: 100%;
+  height: 1.33333333rem;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  background: #fff;
+  border: 1px solid rgba(108, 108, 108, 0.3);
+  box-shadow: 0 0 0.26666667rem 0 hsla(0, 6%, 58%, 0.6);
+  z-index: 99;
+}
+.footmenu a {
+  width: 20%;
+  height: 100%;
+}
+.footmenu a div {
+  text-align: center;
+}
+.footmenu a div img {
+  width: 1.6rem;
+  height: 1.22666667rem;
+}
+.footmenu a div .bigmenu {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: -0.4rem;
+}
+.tuijian {
+  width: 100%;
+  height: 10.66666667rem;
+  margin-top: 0.13333333rem;
+}
+.tuijian h1 {
+  width: 100%;
+  height: 0.93333333rem;
+  background: url(../img/tuijian.jpg.dpg) no-repeat;
+  background-size: contain;
+  background-color: #F6F6F6;
+}
+.tuijian ul {
+  width: 100%;
+  height: 9.76rem;
+}
+.tuijian ul li {
+  width: 24.5%;
+  height: 3.25333333rem;
+  margin-left: 0.6%;
+}
+.tuijian ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tuijian ul li i {
+  width: 1.86666667rem;
+  height: 1.86666667rem;
+  border-radius: 0.26666667rem;
+}
+.tuijian ul li .bg1 {
+  background: url(../img/bg1.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.tuijian ul li .bg2 {
+  background: url(../img/bg2.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.tuijian ul li .bg3 {
+  background: url(../img/bg3.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.tuijian ul li .bg4 {
+  background: url(../img/bg4.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.tuijian ul li .bg5 {
+  background: url(../img/bg5.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.tuijian ul li .bg6 {
+  background: url(../img/bg6.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.tuijian ul li .bg7 {
+  background: url(../img/bg7.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.tuijian ul li .bg8 {
+  background: url(../img/bg8.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.tuijian ul li .bg9 {
+  background: url(../img/bg9.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.tuijian ul li .bg10 {
+  background: url(../img/bg10.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.tuijian ul li .bg11 {
+  background: url(../img/bg11.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.tuijian ul li .bg12 {
+  background: url(../img/bg12.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.tuijian ul li div {
+  width: 100%;
+  height: 1.06666667rem;
+  text-align: center;
+  color: #fff;
+}
+.tuijian ul li div h3 {
+  font-size: 0.42666667rem;
+  margin-top: 0.13333333rem;
+}
+.tuijian ul li div p {
+  font-size: 0.32rem;
+}
+.tuijian ul li:nth-child(1),
+.tuijian ul li:nth-child(5),
+.tuijian ul li:nth-child(9) {
+  margin-left: 0px;
+}
+.tuijian ul li:nth-child(1),
+.tuijian ul li:nth-child(7),
+.tuijian ul li:nth-child(12) {
+  background: url(../img/greenbg.jpg) no-repeat;
+  background-size: cover;
+}
+.tuijian ul li:nth-child(2),
+.tuijian ul li:nth-child(8),
+.tuijian ul li:nth-child(9) {
+  background: url(../img/bluebg.jpg) no-repeat;
+  background-size: cover;
+}
+.tuijian ul li:nth-child(3),
+.tuijian ul li:nth-child(5),
+.tuijian ul li:nth-child(10) {
+  background: url(../img/redbg.jpg) no-repeat;
+  background-size: cover;
+}
+.tuijian ul li:nth-child(4),
+.tuijian ul li:nth-child(6),
+.tuijian ul li:nth-child(11) {
+  background: url(../img/yellowbg.jpg) no-repeat;
+  background-size: cover;
+}
+.litterGarden {
+  width: 100%;
+  height: 10.53333333rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.13333333rem;
+}
+.litterGarden h1 {
+  width: 100%;
+  height: 0.93333333rem;
+  background: url(../img/litter.jpg.dpg) no-repeat center;
+  background-size: contain;
+  background-color: #F6F6F6;
+}
+.litterGarden ul {
+  width: 100%;
+  height: 3.2rem;
+}
+.litterGarden ul li {
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.litterGarden ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.litterGarden ul li h2 {
+  font-size: 0.42666667rem;
+  font-weight: 100;
+  color: #111;
+}
+.litterGarden ul li p {
+  font-size: 0.32rem;
+  color: #648EFF;
+}
+.litterGarden ul li div {
+  height: 1.86666667rem;
+}
+.litterGarden ul li i {
+  width: 1.73333333rem;
+  height: 1.73333333rem;
+}
+.litterGarden ul li .bg1 {
+  background: url(../img/basketball.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.litterGarden ul li .bg2 {
+  background: url(../img/shoes.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.litterGarden ul li .bg3 {
+  background: url(../img/yunqi.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.litterGarden ul li .bg4 {
+  background: url(../img/yunqi1.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.litterGarden ul li .bg5 {
+  background: url(../img/run.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.litterGarden ul li .bg6 {
+  background: url(../img/majia.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.litterGarden ul li .bg7 {
+  background: url(../img/aiche.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.litterGarden ul li .bg8 {
+  background: url(../img/jiaju.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.litterGarden ul li:first-child {
+  border-right: 1px solid rgba(108, 108, 108, 0.3);
+  border-bottom: 1px solid rgba(108, 108, 108, 0.3);
+}
+.litterGarden ul li:nth-child(2) {
+  border-bottom: 1px solid rgba(108, 108, 108, 0.3);
+}
+.litterGarden ul .litterLi2 {
+  width: 25%;
+  border-right: 1px solid rgba(108, 108, 108, 0.3);
+}
+.litterGarden ul .litterLi2:first-child,
+.litterGarden ul .litterLi2:nth-child(2) {
+  border-bottom: none;
+}
+.litterGarden ul .litterLi2:last-child {
+  border-right: none;
+}
+.litterGarden .qingchang {
+  width: 100%;
+  height: 3.06666667rem;
+  background: url(../img/qingchang.gif) no-repeat;
+  background-size: contain;
+}
+.loveLife {
+  width: 100%;
+  height: 11.06666667rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.13333333rem;
+}
+.loveLife h1 {
+  width: 100%;
+  height: 0.93333333rem;
+  background: url(../img/lovelife.jpg.dpg) no-repeat;
+  background-size: cover;
+  background-color: #F6F6F6;
+}
+.loveLife ul {
+  width: 100%;
+  height: 6.4rem;
+}
+.loveLife ul li {
+  height: 50%;
+  width: 50%;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(108, 108, 108, 0.3);
+}
+.loveLife ul li a {
+  width: 100%;
+  height: 100%;
+}
+.loveLife ul li h2 {
+  font-size: 0.42666667rem;
+  color: #111;
+  font-weight: 100;
+  text-indent: 0.3rem;
+  margin-top: 0.13333333rem;
+}
+.loveLife ul li p {
+  font-size: 0.32rem;
+  color: #FF5959;
+  text-indent: 0.3rem;
+}
+.loveLife ul li div {
+  width: 100%;
+  height: 1.73333333rem;
+  text-align: center;
+  margin-top: 0.13333333rem;
+}
+.loveLife ul li div i {
+  width: 1.73333333rem;
+  height: 1.73333333rem;
+}
+.loveLife ul li div .bg1 {
+  background: url(../img/3c.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.loveLife ul li div .bg2 {
+  background: url(../img/3c1.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.loveLife ul li div .bg3 {
+  background: url(../img/jiadian.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.loveLife ul li div .bg4 {
+  background: url(../img/jiadian2.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.loveLife ul li div .bg5 {
+  background: url(../img/chaoshi.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.loveLife ul li div .bg6 {
+  background: url(../img/chaoshi2.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.loveLife ul li div .bg7 {
+  background: url(../img/jiafang.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.loveLife ul li div .bg8 {
+  background: url(../img/jiafang2.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.loveLife ul li:first-child,
+.loveLife ul li:nth-child(3) {
+  border-right: 1px solid rgba(108, 108, 108, 0.3);
+}
+.loveLife .secondUl {
+  height: 3.2rem;
+}
+.loveLife .secondUl li {
+  height: 100%;
+  width: 25%;
+  border-bottom: none;
+}
+.loveLife .secondUl li i {
+  width: 1.73333333rem;
+  height: 1.73333333rem;
+}
+.loveLife .secondUl li .bg9 {
+  background: url(../img/tower.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.loveLife .secondUl li .bg10 {
+  background: url(../img/meizhuang.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.loveLife .secondUl li .bg11 {
+  background: url(../img/lingshi.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.loveLife .secondUl li .bg12 {
+  background: url(../img/nvshen.jpg.dpg) no-repeat;
+  background-size: contain;
+}
+.loveLife .secondUl .secondLi:nth-child(2) {
+  border-right: 1px solid rgba(108, 108, 108, 0.3);
+}
+.sujest {
+  width: 100%;
+  height: 24rem;
+  background: #F0F2F5;
+}
+.sujest .title {
+  width: 100%;
+  height: 1.33333333rem;
+  background: #F0F2F5;
+  text-align: center;
+}
+.sujest .title i {
+  width: 0.34666667rem;
+  height: 0.34666667rem;
+  background: url(../img/up.png) no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+.sujest .title span {
+  font-size: 0.37333333rem;
+  color: #666;
+  vertical-align: middle;
+}
+.sujest ul {
+  width: 100%;
+}
+.sujest ul li {
+  width: 4.93333333rem;
+  height: 7.46666667rem;
+  background: #fff;
+}
+.sujest ul li .image {
+  width: 100%;
+  height: 4.96rem;
+  position: relative;
+}
+.sujest ul li .image img {
+  height: 100%;
+  width: 100%;
+}
+.sujest ul li .image span {
+  height: 1.09333333rem;
+  width: 100%;
+  font-size: 0.32rem;
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  line-height: 1.33333333rem;
+  text-align: center;
+  background: url(../img/probg.png) no-repeat;
+  background-size: cover;
+}
+.sujest ul li:nth-child(2n) {
+  margin-bottom: 0.13333333rem;
+  margin-left: 0.13333333rem;
+}
+.sujest ul li:nth-child(2n+1) {
+  margin-bottom: 0.13333333rem;
+}
+.sujest ul .name {
+  width: 95%;
+  font-size: 0.32rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+  padding: 0 0.10666667rem;
+  margin-top: 0.08rem;
+}
+.sujest ul .name .market {
+  width: 1.25333333rem;
+  height: 0.34666667rem;
+  background: url(../img/marketLogo.png) no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+.sujest ul .price {
+  font-size: 0.34666667rem;
+  height: 0.66666667rem;
+  padding: 0 0.10666667rem;
+  line-height: 0.66666667rem;
+  margin-top: 0.13333333rem;
+}
+.sujest ul .price span {
+  font-size: 0.34666667rem;
+  color: #F23030;
+}
+.sujest ul .price h5 {
+  display: inline-block;
+  width: 0.85333333rem;
+  height: 0.45333333rem;
+  border: 1px solid #F23030;
+  font-size: 0.34666667rem;
+  color: #F23030;
+  font-weight: 100;
+  text-align: center;
+  line-height: 0.45333333rem;
+}
+.sujest ul .price a {
+  width: 1.30666667rem;
+  height: 0.64rem;
+  border: 1px solid #999;
+  text-align: center;
+  color: #999;
+  line-height: 0.64rem;
+  float: right;
+}

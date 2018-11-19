@@ -1,0 +1,750 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "微软雅黑";
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+i {
+  display: inline-block;
+}
+li {
+  list-style: none;
+  float: left;
+}
+.head {
+  width: 100%;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #999;
+  z-index: 99;
+  box-sizing: border-box;
+}
+.head .back {
+  height: 0.53333333rem;
+  width: 0.53333333rem;
+  background: url(../img/back.png) no-repeat;
+  background-size: contain;
+}
+.head p {
+  width: 7.2rem;
+  height: 0.8rem;
+  font-size: 0.42666667rem;
+  text-align: center;
+  line-height: 0.8rem;
+}
+.head .menu {
+  width: 0.53333333rem;
+  height: 0.53333333rem;
+  background: url(../img/menu.png) no-repeat center;
+  background-size: contain;
+}
+.search {
+  width: 90%;
+  height: 0.8rem;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.53333333rem;
+  background: #F7F7F7;
+  margin-top: 0.26666667rem;
+}
+.search i {
+  width: 0.4rem;
+  height: 0.4rem;
+  background: url(../img/search.png) no-repeat;
+  background-size: contain;
+}
+.search input {
+  width: 7.46666667rem;
+  height: 0.53333333rem;
+  font-size: 0.37333333rem;
+  border: none;
+  text-indent: 0.15rem;
+  background: #F7F7F7;
+}
+.search .clear {
+  background: url(../img/clear.png) no-repeat;
+  background-size: contain;
+  visibility: hidden;
+}
+.windowMenu {
+  position: absolute;
+  top: 1.38666667rem;
+  right: 0.26666667rem;
+  width: 3.33333333rem;
+  height: 5.33333333rem;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 0.13333333rem;
+  display: none;
+  z-index: 99;
+}
+.windowMenu li {
+  height: 1.06666667rem;
+  width: 100%;
+  border-bottom: 1px solid #999;
+  box-sizing: border-box;
+}
+.windowMenu li a {
+  display: block;
+  height: 100%;
+  color: #fff;
+  font-size: 0.37333333rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.windowMenu li a img {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+.windowMenu li a span {
+  width: 1.86666667rem;
+  margin-left: 0.26666667rem;
+}
+.windowMenu:before {
+  content: "";
+  position: absolute;
+  top: -0.13333333rem;
+  right: 0.21333333rem;
+  border-bottom: 0.13333333rem solid rgba(0, 0, 0, 0.9);
+  border-left: 0.13333333rem solid transparent;
+  border-right: 0.13333333rem solid transparent;
+}
+.footmenu {
+  width: 100%;
+  height: 1.33333333rem;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  background: #fff;
+  border: 1px solid rgba(108, 108, 108, 0.3);
+  box-shadow: 0 0 0.26666667rem 0 hsla(0, 6%, 58%, 0.6);
+  z-index: 99;
+}
+.footmenu a {
+  width: 20%;
+  height: 100%;
+}
+.footmenu a div {
+  text-align: center;
+}
+.footmenu a div img {
+  width: 1.6rem;
+  height: 1.22666667rem;
+}
+.footmenu a div .bigmenu {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: -0.4rem;
+}
+.scrowContain {
+  height: 1.06666667rem;
+  overflow: hidden;
+  z-index: 9;
+  background: #fff;
+}
+.menuContain {
+  height: 1.33333333rem;
+  width: 100%;
+  overflow-y: auto;
+  padding-left: 1.33333333rem;
+}
+.menuContain .mainMenu {
+  height: 100%;
+  width: 20rem;
+}
+.menuContain .mainMenu li {
+  width: 0.8rem;
+  height: 1.06666667rem;
+  display: flex;
+  padding-left: 0.26666667rem;
+  padding-right: 0.26666667rem;
+  background: #fff;
+}
+.menuContain .mainMenu li a {
+  height: 100%;
+  width: 100%;
+  font-size: 0.37333333rem;
+  color: #666;
+  line-height: 1.06666667rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+.menuContain .mainMenu li #menu1 {
+  color: #EC3B3D;
+  border-bottom: 0.05333333rem solid #EC3B3D;
+}
+.menuContain .mainMenu li:first-child {
+  position: absolute;
+  left: 0px;
+}
+.menuContain .mainMenu li:first-child::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 0.8rem;
+  background: rgba(108, 108, 108, 0.5);
+  right: 0px;
+  top: 0.13333333rem;
+}
+.swiper-container {
+  width: 100%;
+  height: 2.8rem;
+}
+.swiper-container a {
+  width: 100%;
+  height: 100%;
+}
+.swiper-container img {
+  width: 100%;
+  height: 100%;
+}
+#white > .swiper-pagination-bullet {
+  width: 0.13333333rem;
+  height: 0.13333333rem;
+  border-radius: 0.13333333rem;
+  opacity: 1;
+  background: #ddd;
+  margin-left: 0.13333333rem;
+}
+#white > .swiper-pagination-bullet-active {
+  background: #E4393C;
+  width: 0.21333333rem;
+}
+#white {
+  bottom: 0px;
+}
+#secondwhite > .swiper-pagination-bullet {
+  width: 0.12rem;
+  height: 0.12rem;
+  border-radius: 0.12rem;
+  opacity: 1;
+  background: #ddd;
+  margin-left: 0.13333333rem;
+}
+#secondwhite > .swiper-pagination-bullet-active {
+  background: #666;
+  width: 0.21333333rem;
+}
+#menu {
+  height: 4.26666667rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: url(https://img13.360buyimg.com/jdphoto/jfs/t30400/24/184332313/31758/84fdbca1/5beaa323N9494928d.jpg);
+  background-size: cover;
+}
+#menu ul {
+  width: 100%;
+  height: 1.86666667rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#menu ul li {
+  width: 2rem;
+  height: 1.6rem;
+}
+#menu ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #666;
+}
+#menu ul li a img {
+  width: 0.96rem;
+  height: 0.96rem;
+}
+#menu ul li a p {
+  font-size: 0.32rem;
+}
+#secondMenu {
+  width: 93%;
+  height: 5.06666667rem;
+  margin: 0px auto;
+}
+#secondMenu ul {
+  width: 100%;
+  height: 4.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+#secondMenu ul li {
+  width: 2.88rem;
+  height: 100%;
+}
+#secondMenu ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#secondMenu ul li a img {
+  width: 2.88rem;
+  height: 2.88rem;
+}
+#secondMenu ul li a div {
+  height: 0.61333333rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #EA3B3E;
+}
+#secondMenu ul li a div span {
+  font-size: 0.32rem;
+}
+#secondMenu ul li a div small {
+  font-size: 0.32rem;
+}
+#secondMenu ul li a div small big {
+  font-weight: 600;
+}
+#secondMenu ul li a p {
+  font-size: 0.32rem;
+  height: 0.66666667rem;
+  line-height: 0.66666667rem;
+  color: #999;
+}
+.menuGif {
+  width: 100%;
+  height: 2.13333333rem;
+}
+.menuGif a {
+  width: 100%;
+  height: 100%;
+}
+.menuGif img {
+  width: 100%;
+  height: 100%;
+}
+.detail {
+  width: 100%;
+  height: 0.93333333rem;
+  display: flex;
+  justify-content: center;
+}
+.detail a {
+  width: 96%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.detail a h5 {
+  display: inline-block;
+  font-size: 0.42666667rem;
+  color: #F02B2B;
+  width: 1.73333333rem;
+}
+.detail a h5 span {
+  color: #111;
+}
+.detail a h6 {
+  display: inline-block;
+  font-size: 0.32rem;
+  color: #999;
+  font-weight: 100;
+}
+.detail a .time {
+  width: 3.73333333rem;
+  height: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+.detail a .time span {
+  font-size: 0.32rem;
+  color: #EA3B3E;
+  width: 0.42666667rem;
+  height: 0.48rem;
+  text-align: center;
+  line-height: 0.48rem;
+  border: 1px solid rgba(108, 108, 108, 0.3);
+  vertical-align: middle;
+}
+.detail a .time small {
+  width: 0.13333333rem;
+}
+.detail a p {
+  font-size: 0.32rem;
+  color: #999;
+  display: inline-block;
+  float: right;
+}
+.detail a i {
+  width: 0.29333333rem;
+  height: 0.29333333rem;
+  background: url(../img/arrow_rt.png) no-repeat;
+  background-size: cover;
+}
+.pintemai {
+  width: 100%;
+  height: 4.53333333rem;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(108, 108, 108, 0.3);
+}
+.pintemai li {
+  width: 50%;
+  height: 100%;
+}
+.pintemai li h5 {
+  font-size: 0.42666667rem;
+  color: #F02B2B;
+  margin-top: 0.26666667rem;
+  margin-left: 0.4rem;
+}
+.pintemai li h5 span {
+  color: #111;
+}
+.pintemai li div {
+  width: 2.02666667rem;
+  height: 3.12rem;
+  display: inline-block;
+}
+.pintemai li div a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.pintemai li div a img {
+  width: 1.97333333rem;
+  height: 1.97333333rem;
+  margin-top: 0.13333333rem;
+}
+.pintemai li div a .targit {
+  width: 1.65333333rem;
+  height: 0.8rem;
+  position: absolute;
+  border-radius: 0.53333333rem;
+  border: 0.02666667rem solid #EA3B3E;
+  bottom: 0.53333333rem;
+  left: 0.18666667rem;
+}
+.pintemai li div a h6 {
+  font-size: 0.32rem;
+  font-weight: 100;
+  color: #333;
+  text-align: center;
+}
+.pintemai li div a .temai {
+  margin-top: 0.53333333rem;
+}
+.pintemai li div a p {
+  height: 0.61333333rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #EA3B3E;
+}
+.pintemai li div a p span {
+  font-size: 0.32rem;
+}
+.pintemai li div a p small {
+  font-size: 0.32rem;
+}
+.pintemai li div a p small big {
+  font-weight: 600;
+}
+.pintemai li .firstpin {
+  margin-left: 0.4rem;
+}
+.pintemai li:first-child {
+  border-right: 1px solid rgba(108, 108, 108, 0.3);
+}
+.baokuan {
+  height: 2.66666667rem;
+  width: 9.2rem;
+  margin: 0px auto;
+}
+.baokuan a {
+  width: 100%;
+  height: 100%;
+}
+.baokuan img {
+  width: 100%;
+  height: 100%;
+}
+.everyday {
+  height: 1.86666667rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.everyday h3 {
+  font-size: 0.42666667rem;
+  color: #333;
+  font-weight: 100;
+}
+.everyday h6 {
+  font-size: 0.32rem;
+  color: #999;
+  font-weight: 100;
+}
+.everyDayPin {
+  width: 100%;
+  height: 18.66666667rem;
+}
+.everyDayPin ul {
+  width: 100%;
+  height: 1.86666667rem;
+}
+.everyDayPin ul li {
+  width: 100%;
+  height: 4.26666667rem;
+  position: relative;
+}
+.everyDayPin ul li a {
+  width: 100%;
+  height: 100%;
+}
+.everyDayPin ul li a img {
+  width: 4.21333333rem;
+  height: 4.13333333rem;
+}
+.everyDayPin ul li a .stamp {
+  position: absolute;
+  font-size: 0.32rem;
+  bottom: 0.13333333rem;
+  color: #fff;
+  padding-left: 0.13333333rem;
+  padding-right: 0.13333333rem;
+  padding-bottom: 0.02666667rem;
+  padding-top: 0.02666667rem;
+  border-radius: 0.7rem 0 0.7rem 0.7rem;
+}
+.everyDayPin ul li a .red {
+  background: linear-gradient(90deg, #e93b3d, #fe9373);
+}
+.everyDayPin ul li a .yellow {
+  background: linear-gradient(90deg, #ff7901, #ffc30a);
+}
+.everyDayPin ul li a .blue {
+  background: linear-gradient(90deg, #39aaa8, #6bc0be);
+}
+.everyDayPin ul li a div {
+  width: 5.06666667rem;
+  height: 4rem;
+  float: right;
+  margin-right: 0.4rem;
+  position: relative;
+}
+.everyDayPin ul li a div h1 {
+  font-size: 0.37333333rem;
+  font-weight: 100;
+  color: #333;
+  margin-top: 0.26666667rem;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -moz-line-clamp: 2;
+  -moz-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.everyDayPin ul li a div span {
+  font-size: 0.34666667rem;
+  color: #999;
+}
+.everyDayPin ul li a div div {
+  width: 100%;
+  height: 0.8rem;
+  display: flex;
+  margin-top: 0.13333333rem;
+}
+.everyDayPin ul li a div .pintehui {
+  margin-left: 0.53333333rem;
+}
+.everyDayPin ul li a div .pinbaokuan {
+  margin-left: 0.53333333rem;
+}
+.everyDayPin ul li a div .yipin {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.everyDayPin ul li a div p {
+  height: 0.61333333rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #EA3B3E;
+  position: absolute;
+  bottom: 0.53333333rem;
+}
+.everyDayPin ul li a div p span {
+  font-size: 0.32rem;
+  color: #EA3B3E;
+}
+.everyDayPin ul li a div p small {
+  font-size: 0.37333333rem;
+}
+.everyDayPin ul li a div p small big {
+  font-weight: 600;
+}
+.everyDayPin ul li a div .kaituan {
+  width: 1.92rem;
+  height: 0.8rem;
+  text-align: center;
+  font-size: 0.37333333rem;
+  position: absolute;
+  right: 0px;
+  line-height: 0.8rem;
+  bottom: 0px;
+  color: #fff;
+  background: linear-gradient(90deg, #e93b3d, #ff9474);
+  border-radius: 0.53333333rem;
+}
+.pubPageContain {
+  display: none;
+}
+.pubPageContain .headmenu {
+  height: 2.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.pubPageContain .headmenu li {
+  width: 2.50666667rem;
+  height: 2.26666667rem;
+}
+.pubPageContain .headmenu li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pubPageContain .headmenu li a img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.pubPageContain .headmenu li a p {
+  font-size: 0.37333333rem;
+  height: 0.66666667rem;
+  color: #666;
+  line-height: 0.66666667rem;
+}
+.pubPageContain .sujest {
+  width: 100%;
+  height: 24rem;
+  background: #F0F2F5;
+  border-top: 2px solid #eee;
+}
+.pubPageContain .sujest .title {
+  width: 100%;
+  height: 1.33333333rem;
+  background: #F0F2F5;
+  text-align: center;
+}
+.pubPageContain .sujest .title i {
+  width: 0.34666667rem;
+  height: 0.34666667rem;
+  background: url(../img/up.png) no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+.pubPageContain .sujest .title span {
+  font-size: 0.37333333rem;
+  color: #666;
+  vertical-align: middle;
+}
+.pubPageContain .sujest ul {
+  width: 100%;
+}
+.pubPageContain .sujest ul li {
+  width: 4.93333333rem;
+  height: 7.73333333rem;
+  background: #fff;
+}
+.pubPageContain .sujest ul li .image {
+  width: 100%;
+  height: 4.93333333rem;
+  position: relative;
+}
+.pubPageContain .sujest ul li .image img {
+  height: 4.93333333rem;
+  width: 4.93333333rem;
+}
+.pubPageContain .sujest ul li .image span {
+  height: 1.09333333rem;
+  width: 100%;
+  font-size: 0.32rem;
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  line-height: 1.33333333rem;
+  text-align: center;
+  background: url(../img/probg.png) no-repeat;
+  background-size: cover;
+}
+.pubPageContain .sujest ul li:nth-child(2n) {
+  margin-bottom: 0.13333333rem;
+  margin-left: 0.13333333rem;
+}
+.pubPageContain .sujest ul li:nth-child(2n+1) {
+  margin-bottom: 0.13333333rem;
+}
+.pubPageContain .sujest ul .name {
+  font-size: 0.32rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+  padding: 0 0.26666667rem;
+  margin-top: 0.08rem;
+  color: #333;
+}
+.pubPageContain .sujest ul .name img {
+  width: 1.30666667rem;
+  height: 0.37333333rem;
+}
+.pubPageContain .sujest ul .price {
+  font-size: 0.34666667rem;
+  height: 0.66666667rem;
+  padding: 0 0.26666667rem;
+  line-height: 0.66666667rem;
+  margin-top: 0.13333333rem;
+}
+.pubPageContain .sujest ul .price span {
+  font-size: 0.32rem;
+  color: #fff;
+  background: linear-gradient(90deg, #e93b3d, #fe9373);
+  border-radius: 0.35rem 0 0.35rem 0.35rem;
+  padding-left: 0.13333333rem;
+  padding-right: 0.13333333rem;
+}
+.pubPageContain .sujest ul .price small {
+  color: #e93b3d;
+}
+.pubPageContain .sujest ul .price small big {
+  font-weight: 600;
+  font-size: 0.42666667rem;
+}
+.pubPageContain .sujest ul .price p {
+  color: #999;
+  font-size: 0.32rem;
+}

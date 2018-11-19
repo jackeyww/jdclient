@@ -1,0 +1,252 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "微软雅黑";
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+}
+i {
+  display: inline-block;
+}
+li {
+  list-style: none;
+  float: left;
+}
+.head {
+  width: 100%;
+  height: 1.2rem;
+}
+.head div {
+  width: 100%;
+  height: 100%;
+  font-size: 0.42666667rem;
+  line-height: 1.2rem;
+  text-align: center;
+}
+.head div .back {
+  width: 0.53333333rem;
+  height: 0.53333333rem;
+  background: url(../img/back.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 0.26666667rem;
+  top: 0.33333333rem;
+}
+.wrapAll {
+  width: 90%;
+  height: 16rem;
+  margin: 0px auto;
+  margin-top: 30px;
+}
+.wrapAll input {
+  height: 0.8rem;
+  font-size: 0.42666667rem;
+  border: none;
+  text-indent: 0.3rem;
+  outline: none;
+}
+.wrapAll .clear {
+  visibility: hidden;
+}
+.wrapAll i {
+  width: 0.64rem;
+  height: 0.64rem;
+}
+.wrapAll .user {
+  width: 100%;
+  height: 3.2rem;
+}
+.wrapAll .user .username_login {
+  width: 100%;
+  height: 100%;
+}
+.wrapAll .user .username_login .username {
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid rgba(108, 108, 108, 0.5);
+  display: flex;
+  align-items: center;
+}
+.wrapAll .user .username_login .username input {
+  width: 85%;
+}
+.wrapAll .user .username_login .username .clear {
+  background: url(../img/clearnum.png) no-repeat;
+  background-size: contain;
+}
+.wrapAll .user .username_login .password {
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid rgba(108, 108, 108, 0.5);
+  display: flex;
+  align-items: center;
+}
+.wrapAll .user .username_login .password input {
+  width: 59%;
+}
+.wrapAll .user .username_login .password .clear {
+  background: url(../img/clearnum.png) no-repeat;
+  background-size: contain;
+  margin-right: 0.13333333rem;
+}
+.wrapAll .user .username_login .password .eye {
+  background: url(../img/closeeye.png) no-repeat;
+  background-size: contain;
+}
+.wrapAll .user .username_login .password span {
+  width: 1px;
+  height: 0.66666667rem;
+  background: #999;
+  margin-left: 0.26666667rem;
+  margin-right: 0.26666667rem;
+}
+.wrapAll .user .username_login .password a {
+  font-size: 0.37333333rem;
+  color: #111;
+}
+.wrapAll .user .message_login {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.wrapAll .user .message_login .phonenum {
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid rgba(108, 108, 108, 0.5);
+  display: flex;
+  align-items: center;
+}
+.wrapAll .user .message_login .phonenum .area_code {
+  font-size: 0.37333333rem;
+  text-indent: 0.3rem;
+}
+.wrapAll .user .message_login .phonenum .area {
+  width: 0.37333333rem;
+  height: 0.16rem;
+  background: url(../img/area.png) no-repeat;
+  background-size: contain;
+  margin-left: 0.13333333rem;
+}
+.wrapAll .user .message_login .phonenum input {
+  width: 40%;
+}
+.wrapAll .user .message_login .phonenum .clear {
+  background: url(../img/clearnum.png) no-repeat;
+  background-size: contain;
+  margin-right: 0.13333333rem;
+  margin-left: 0.13333333rem;
+}
+.wrapAll .user .message_login .phonenum .line {
+  width: 1px;
+  height: 0.66666667rem;
+  background: #999;
+  margin-left: 0.26666667rem;
+  margin-right: 0.26666667rem;
+}
+.wrapAll .user .message_login .phonenum a {
+  color: #666;
+  font-size: 0.37333333rem;
+}
+.wrapAll .user .message_login .telcode {
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid rgba(108, 108, 108, 0.5);
+  display: flex;
+  align-items: center;
+}
+.wrapAll .user .message_login .telcode input {
+  width: 85%;
+}
+.wrapAll .user .message_login .telcode .clear {
+  background: url(../img/clearnum.png) no-repeat;
+  background-size: contain;
+  margin-right: 0.13333333rem;
+  margin-left: 0.13333333rem;
+}
+.login {
+  width: 100%;
+  height: 1.33333333rem;
+  border-radius: 0.66666667rem;
+  background: linear-gradient(90deg, #fab3b3, #ffbcb3 73%, #ffcaba);
+  color: #fff;
+  font-size: 0.42666667rem;
+  text-align: center;
+  line-height: 1.33333333rem;
+  margin-top: 0.8rem;
+}
+.keyLogin {
+  width: 100%;
+  height: 1.33333333rem;
+  border-radius: 0.66666667rem;
+  border: 1px solid #F10000;
+  color: #F10000;
+  font-size: 0.42666667rem;
+  text-align: center;
+  line-height: 1.33333333rem;
+  background: #fff;
+}
+.switch {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.66666667rem;
+}
+.switch a {
+  font-size: 0.37333333rem;
+  color: #999;
+}
+.otherLogin {
+  width: 100%;
+  margin-top: 2.13333333rem;
+}
+.otherLogin h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 0.32rem;
+  font-weight: 100;
+  color: #999;
+}
+.otherLogin ul {
+  width: 100%;
+  height: 2.93333333rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.otherLogin ul li {
+  width: 1.28rem;
+  height: 70%;
+}
+.otherLogin ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.otherLogin ul li a img {
+  height: 1.28rem;
+  width: 1.28rem;
+}
+.otherLogin ul li a span {
+  font-size: 0.32rem;
+  color: #333;
+}
+.otherLogin div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.otherLogin div span {
+  font-size: 0.32rem;
+  color: #999;
+}
+.otherLogin div a {
+  font-size: 0.32rem;
+  color: #409EFF;
+}

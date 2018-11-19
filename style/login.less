@@ -1,0 +1,226 @@
+@charset "UTF-8";
+*{padding:0px;margin: 0px;font-family: "微软雅黑";}
+a{text-decoration: none;display: inline-block;
+-webkit-tap-highlight-color:transparent;}
+i{display: inline-block;}
+li{list-style: none;float: left;}
+@num: 37.5rem;
+ 
+
+   	.head{
+   		width: 100%;
+   		height: 45/@num ;
+   		// border-bottom: 1px solid #999;
+		div{
+			width: 100%;height: 100%;
+			font-size: 16/@num;
+			line-height: 45/@num;
+			text-align: center;
+			.back{
+				width: 20/@num;height: 20/@num;
+	   			background: url(../img/back.png) no-repeat;
+				background-size: contain;
+				position: absolute;
+				left: 10/@num;top: 12.5/@num;
+			}
+		}
+   	}
+
+   	.wrapAll{
+   		width: 90%;
+   		height: 600/@num;
+   		margin: 0px auto;
+   		margin-top: 30px;
+        
+        input{
+   				height: 30/@num;   				
+   				font-size: 16/@num;
+   				border: none;
+   				text-indent: 0.3rem;
+   				outline: none;
+   				
+   		}
+         .clear{
+            visibility: hidden;
+         }
+   		i{width: 24/@num;height: 24/@num;} 
+   		.user{
+   			width: 100%;height: 120/@num;
+
+			// 用户密码登录
+   			.username_login{
+   				width: 100%;height: 100%;
+   				.username{
+   					width: 100%;height:50%;
+   					border-bottom: 1px solid rgba(108,108,108,0.5);
+   					display: flex;
+   					align-items:center;
+
+   					input{width: 85%;} 
+   					.clear{
+   						background: url(../img/clearnum.png) no-repeat;
+   						background-size: contain;
+   					}
+   				}
+   				.password{
+   					width: 100%;height:50%;
+   					border-bottom: 1px solid rgba(108,108,108,0.5);
+   					display: flex;
+   					align-items:center;
+					
+   					input{width: 59%;}
+   					.clear{
+   						background: url(../img/clearnum.png) no-repeat;
+   						background-size: contain;
+   						margin-right: 5/@num;
+   					}
+   					.eye{background:url(../img/closeeye.png) no-repeat;background-size: contain;}
+   					span{
+   						width: 1px;height: 25/@num;
+   						background: #999;margin-left: 10/@num;
+   						margin-right: 10/@num;
+   					}
+   					a{
+   						font-size: 14/@num;color: #111;
+   					}
+   				}
+   			}
+				
+			// 短信登录
+   			.message_login{
+   				width: 100%;height: 100%;
+   				display: none;
+				.phonenum{
+					width: 100%;height:50%;
+   					border-bottom: 1px solid rgba(108,108,108,0.5);
+   					display: flex;
+   					align-items:center;
+
+   					.area_code{
+   						font-size: 14/@num;
+   						text-indent: 0.3rem;
+   					}
+   					.area{
+   						width: 14/@num;height: 6/@num;
+   						background: url(../img/area.png) no-repeat;background-size: contain;
+   						margin-left: 5/@num;
+   					}
+   					input{width: 40%;}
+   					.clear{
+   						background: url(../img/clearnum.png) no-repeat;
+   						background-size: contain;
+   						margin-right: 5/@num;
+   						margin-left: 5/@num;
+   					}
+   					.line{
+   						width: 1px;height: 25/@num;
+   						background: #999;margin-left: 10/@num;
+   						margin-right: 10/@num;
+   					}
+					a{color: #666;font-size: 14/@num;}
+				}
+				.telcode{
+					width: 100%;height:50%;
+   					border-bottom: 1px solid rgba(108,108,108,0.5);
+   					display: flex;
+   					align-items:center;
+
+   					input{width: 85%;}
+   					.clear{
+   						background: url(../img/clearnum.png) no-repeat;
+   						background-size: contain;
+   						margin-right: 5/@num;
+   						margin-left: 5/@num;
+   					}
+				}
+   			}
+   		}
+   	}
+
+   	.login{
+   		width: 100%;height: 50/@num;
+   		border-radius: 25/@num;
+   		background: linear-gradient(90deg,#fab3b3,#ffbcb3 73%,#ffcaba);
+   		color: #fff;font-size: 16/@num;
+   		text-align: center;
+   		line-height: 50/@num;
+   		margin-top: 30/@num;
+   	}
+   	.keyLogin{
+   		width: 100%;height: 50/@num;
+   		border-radius: 25/@num;
+   		border: 1px solid #F10000;
+   		color: #F10000;
+   		font-size: 16/@num;
+   		text-align: center;
+   		line-height: 50/@num;
+   		background: #fff;
+   	}
+ 	
+ 	.switch{
+ 		width: 100%;
+ 		display: flex;
+ 		justify-content:space-between;
+ 		margin-top: 25/@num;
+		a{
+			font-size: 14/@num;
+			color: #999;
+		}
+
+ 	}
+   
+   .otherLogin{
+      width: 100%;
+      margin-top: 80/@num;
+      
+      h3{
+         width: 100%;
+         text-align: center;
+         font-size: 12/@num;
+         font-weight: 100;
+         color: #999;
+      }
+
+      ul{
+         width: 100%;
+         height: 110/@num;
+         display: flex;
+         justify-content:center;
+         align-items:center;
+         li{
+            width: 48/@num;
+            height: 70%;
+
+            a{
+               width: 100%;height: 100%;
+               display: flex;
+               flex-direction:column;
+               align-items:center;
+               justify-content:space-around;
+
+               img{
+                  height: 48/@num;width: 48/@num;
+               }
+
+               span{
+                  font-size: 12/@num;
+                  color: #333;
+               }
+            }
+         }
+      }
+
+      div{
+         width: 100%;
+         display: flex;
+         justify-content:center;
+         span{
+            font-size: 12/@num;
+            color: #999;
+         }
+         a{
+            font-size: 12/@num;
+            color: #409EFF;
+         }
+      }
+   }
