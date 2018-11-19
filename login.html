@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style/login.css">
+	<link rel="icon" href="https://m.jd.com/favicon.ico">
+	<title>京东登录</title>
+	<script type="text/javascript">
+		var pixelRatio = 1 / window.devicePixelRatio;    //还原设备的真实分辨率；  
+		//devicePixelRatio设备的像素比；     
+		document.write('<meta name="viewport" content="width=device-width,initial-scale='+pixelRatio+',minimum-scale='+pixelRatio+',maximum-scale='+pixelRatio+'" />');
+		var html=document.getElementsByTagName('html')[0];
+		var pageWidth=html.getBoundingClientRect().width;
+		html.style.fontSize=pageWidth/10+"px";
+
+		window.onload = function(){
+			var login = document.getElementById("changeLogin");
+			var changeLogin = document.getElementById("changeLogin");
+			var username_login = document.getElementsByClassName("username_login")[0];
+			var message_login = document.getElementsByClassName("message_login")[0];
+			var inputs = document.getElementsByTagName("input");
+			var clears = document.getElementsByClassName("clear");
+
+			login.onclick = function(){
+				if(message_login.style.display == "block"){
+					username_login.style.display = "block";
+					message_login.style.display = "none";
+					changeLogin.innerText = "账号密码登录";
+				}else{
+					username_login.style.display = "none";
+					message_login.style.display = "block";
+					changeLogin.innerText = "短信验证码登录";
+				}
+			}
+				checkinput();
+			}
+			
+		function checkinput(num){
+			var inputs = document.getElementsByTagName("input");
+			var clears = document.getElementsByClassName("clear");
+			var login = document.getElementsByClassName("login")[0];
+			var username_login = document.getElementsByClassName("username_login")[0];
+			var message_login = document.getElementsByClassName("message_login")[0];
+			for(var i=0;i<clears.length;i++){
+				if(clears[i] == document.getElementById("clear"+num)){
+                    clears[i].style.visibility = "visible";
+				}
+				if (inputs[i].value == '') {
+					clears[i].style.visibility = "hidden";
+				}
+                // if(username_login.style.display == "block"){
+					if(inputs[0].value != '' && inputs[1].value != ''){
+                		login.style.background = "#F50800";
+                	}else{
+                		login.style.background = "linear-gradient(90deg,#fab3b3,#ffbcb3 73%,#ffcaba)";
+                	}
+				// }
+			}
+		}
+		function clearword(num){
+			var inputs = document.getElementsByTagName("input");
+			var clears = document.getElementsByClassName("clear");
+			var login = document.getElementsByClassName("login")[0];
+			var username_login = document.getElementsByClassName("username_login")[0];
+			var message_login = document.getElementsByClassName("message_login")[0];
+			for(var i=0;i<clears.length;i++){
+				if(clears[i] == document.getElementById("clear"+num)){
+                    inputs[i].value = null;
+                    clears[i].style.visibility = "hidden";
+				}
+				// if(username_login.style.display == "block"){
+					if(inputs[0].value != '' && inputs[1].value != ''){
+                		login.style.background = "#F50800";
+                	}else{
+                		login.style.background = "linear-gradient(90deg,#fab3b3,#ffbcb3 73%,#ffcaba)";
+                	}
+				// }
+			}
+		}
+	</script>
+</head>
+<body>
+	<header class="head">
+		<div>
+			<a href="javascript:history.go(-1);" class="back"></a>
+			京东登录
+		</div>
+	</header>
+	<div class="wrapAll">
+		<div class="user">
+			<div class="username_login">
+				<div class="username">
+					<input type="text" placeholder="用户名/邮箱/已验证手机" onkeyup="checkinput(1)" autocomplete="off"></input>
+					<i class="clear" id="clear1" onclick="clearword(1)"></i>
+				</div>
+				<div class="password">
+					<input type="password" placeholder="请输入密码" onkeyup="checkinput(2)" ></input>
+					<i class="clear" id="clear2" onclick="clearword(2)"></i>
+					<i class="eye"></i>
+					<span></span>
+					<a href="#">忘记密码</a>
+				</div>
+			</div>
+
+			<div class="message_login">
+				<div class="phonenum">
+					<span class="area_code">+86</span>
+					<i class="area"></i>
+					<input type="text" placeholder="请输入手机号" onkeyup="checkinput(3)"></input>
+					<i class="clear" id="clear3" onclick="clearword(3)"></i>
+					<span class="line"></span>
+					<a href="#">获取验证码</a>
+				</div>
+				<div class="telcode">
+					<input type="text" placeholder="请输入收到的验证码" onkeyup="checkinput(4)"></input>
+					<i class="clear" id="clear4" onclick="clearword(4)"></i>
+				</div>
+			</div>
+		</div>
+
+		
+		<a href="#" class="login">登录</a>
+		<a href="#" class="keyLogin">一键登录</a>
+		
+		<div class="switch">
+			<a href="#" id="changeLogin">短信验证码登录</a>
+			<a href="#" id="regist">手机快速注册</a>
+		</div>
+
+		<div class="otherLogin">
+			<h3>其他登录方式</h3>
+			<ul>
+				<li>
+				    <a href="#">
+				    	<img src="img/QQ.png">
+						<span>QQ</span>
+				    </a>
+				</li>
+			</ul>
+			<div>
+				<span>登录即代表您已同意</span>
+				<a href="#">京东隐私政策</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

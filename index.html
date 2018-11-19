@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东商城</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="icon" href="https://m.jd.com/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css">
+	<script type="text/javascript">
+		var pixelRatio = 1 / window.devicePixelRatio;    
+		//还原设备的真实分辨率；  
+		//devicePixelRatio设备的像素比；     
+		document.write('<meta name="viewport" content="width=device-width,initial-scale='+pixelRatio+',minimum-scale='+pixelRatio+',maximum-scale='+pixelRatio+'" />');
+		var html=document.getElementsByTagName('html')[0];
+		var pageWidth=html.getBoundingClientRect().width;
+		html.style.fontSize=pageWidth/10+"px";
+
+		window.onload = function(){
+			var head = document.getElementById("head");
+			window.onscroll = function(){
+			var d = document.documentElement.scrollTop||document.body.scrollTop;
+			// var d = document.documentElement.scrollTop;
+			
+				if (d>100) {
+					head.style.background = "#E43130";
+				}
+				if(d == 0){
+					head.style.background = "none";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<header class="head" id="head">
+		<div class="headcontain">
+			<a class="menu" href="classify.html"></a>
+			<div>
+				<i class="logo"></i>
+				<i class="search"></i>
+				<input  type="text" placeholder="限量好物PLUS会员抢先购" style="outline: none;"></input>
+			</div>
+			<a class="login" href="login.html">登录</a>
+		</div>
+	</header>
+	<div class="footmenu">
+		<a href="#">
+			<div>
+				<img src="img/index.png">
+			</div>
+		</a>
+		<a href="classify.html">
+			<div>
+				<img src="img/fenlei.png">
+			</div>
+		</a>
+		<a href="collections.html">
+			<div>
+				<img src="img/pinggou.png" >
+			</div>
+		</a>
+		<a href="shoppingCart.html">
+			<div>
+				<img src="img/shop.png">
+			</div>
+		</a>
+		<a href="login.html">
+			<div>
+				<img src="img/login.png">
+			</div>
+		</a>
+	</div>
+   <!-- swiper插件轮播图 -->
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+		    <div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s1125x690_jfs/t26506/340/1720993262/165003/7327e5bb/5be95005N000ecb31.jpg!cr_1125x549_0_72!q70.jpg.dpg"></div>
+		    <div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/jfs/t19348/187/686322878/265370/84d7b577/5aa0c4f9N60d9eabc.jpg!cr_1125x549_0_72"></div>
+		    <div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/jfs/t18151/181/711963467/356465/61cb4330/5aa0c546Nfa8c4ff0.jpg!cr_1125x549_0_72"></div>
+		    <div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s1125x690_jfs/t25138/18/2669757363/82307/bc812734/5beab525Nead382df.jpg!cr_1125x549_0_72!q70.jpg.dpg"></div>
+		    <div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/jfs/t14365/76/2453308525/206141/85fcc65e/5aa0c5a0N08ec3d88.jpg!cr_1125x549_0_72"></div>
+		    <div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s1125x690_jfs/t28612/351/107626957/188756/681ebf29/5be7dd0dNca6cd6e7.jpg!cr_1125x549_0_72!q70.jpg.dpg"></div>
+		    <div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s1125x690_jfs/t29011/361/129598542/191753/1b1ce0c1/5be8f654Ne3ce467c.jpg!cr_1125x549_0_72!q70.jpg.dpg"></div>
+		    <div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s1125x690_jfs/t28804/146/86937546/186705/d3d6bc58/5be6f50fN74b8c57a.jpg!cr_1125x549_0_72!q70.jpg.dpg"></div>
+	    </div>
+    <!-- 添加分页器 -->
+    	<div class="swiper-pagination" id="white"></div>
+  </div>
+  <script src="dist/js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+
+	    // 分页器
+	    pagination: {
+	        el: '.swiper-pagination',
+	        clickable:true,
+	    },
+	    // 循环播放
+	    loop:true,
+	    // 自动播放
+	    autoplay:{
+	     	delay:3000,
+	     	// 点击swiper时自动播放不停止
+	     	disableOnInteraction:false,
+	     },
+    });
+
+  </script>
+	<div class="menubg">
+		<img src="https://m.360buyimg.com/mobilecms/jfs/t30739/156/228191566/297597/e25dc1cb/5beaef8fN75bde575.gif">
+	</div>
+	<div class="mainMenu">
+		<ul>
+			<li><a href="#"><img src="https://m.360buyimg.com/mobilecms/jfs/t25648/123/2247892204/14865/f91f1dd4/5bee7c6fNffe624f6.png"><p>京东超市</p></a></li>
+			<li><a href="#"><img src="https://m.360buyimg.com/mobilecms/jfs/t26635/320/1832919204/11533/a2f9878a/5bee366dN1627d554.png"><p>全球购</p></a></li>
+			<li><a href="#"><img src="https://m.360buyimg.com/mobilecms/jfs/t1/8385/17/3537/17895/5bd6ca67E09d23550/32d965fe9a9087a2.png"><p>京东时尚</p></a></li>
+			<li><a href="#"><img src="https://m.360buyimg.com/mobilecms/jfs/t17725/156/1767366877/17404/f45d418b/5ad87bf0N66c5db7c.png"><p>京东生鲜</p></a></li>
+			<li><a href="#"><img src="https://m.360buyimg.com/mobilecms/jfs/t16990/157/2001547525/17770/a7b93378/5ae01befN2494769f.png"><p>京东到家</p></a></li>
+		</ul>
+		<ul>
+			<li><a href="#"><img src="https://m.360buyimg.com/mobilecms/jfs/t18454/342/2607665324/6406/273daced/5b03b74eN3541598d.png"><p>充值缴费</p></a></li>
+			<li><a href="#"><img src="https://m.360buyimg.com/mobilecms/jfs/t22228/270/207441984/11564/88140ab7/5b03fae3N67f78fe3.png"><p>9.9元拼</p></a></li>
+			<li><a href="#"><img src="https://m.360buyimg.com/mobilecms/jfs/t19495/200/1823004232/14065/ca00ab2c/5ad87cf5N4ad8e6f1.png"><p>领券</p></a></li>
+			<li><a href="#"><img src="https://m.360buyimg.com/mobilecms/jfs/t16828/63/2653634926/5662/d18f6fa1/5b03b779N5c0b196f.png"><p>赚钱</p></a></li>
+			<li><a href="#"><img src="https://m.360buyimg.com/mobilecms/jfs/t21481/263/412160889/15938/4246b4f8/5b0cea29N8fb2865f.png"><p>全部</p></a></li>
+		</ul>
+	</div>
+	<div class="jdnews">
+		<a href="#" class="news"></a>
+		<div>
+			<span>热门</span>
+			<p>安卓收费已成定局！华为：我们不怕，免费麒麟OS系统来了</p>
+		</div>
+		<a href="#" class="more">更多</a>
+	</div>
+	<div class="everyday">
+		<a href="#" class="img1"></a>
+		<a href="#" class="img2"></a>
+		<a href="#" class="img3"></a>
+	</div>
+	<!-- 京东秒杀 -->
+	<div class="miaosha">
+		<div class="detail">
+			<a href="#">
+				<h5>京东秒杀</h5>
+				<h6>10点场</h6>
+				<div class="time">
+					<span class="hour">00</span><small>:</small>
+					<span class="minute">14</span><small>:</small>
+					<span class="second">23</span>
+				</div>
+				<p>更多秒杀</p>
+				<i></i>
+			</a>
+		</div>
+		<div class="scrollMenuContainer">
+			<ul class="scrollMenu">
+				<li>
+					<a href="#">
+						<i class="scrrow1"></i>
+						<p class="newprice"><span>￥</span>19.8</p>
+						<p class="oldprice">￥29.8</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="scrrow2"></i>
+						<p class="newprice"><span>￥</span>19.8</p>
+						<p class="oldprice">￥39.9</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="scrrow3"></i>
+						<p class="newprice"><span>￥</span>88.9</p>
+						<p class="oldprice">￥199</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="scrrow4"></i>
+						<p class="newprice"><span>￥</span>3798</p>
+						<p class="oldprice">￥4300</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="scrrow5"></i>
+						<p class="newprice"><span>￥</span>89</p>
+						<p class="oldprice">￥259</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="scrrow6"></i>
+						<p class="newprice"><span>￥</span>3219</p>
+						<p class="oldprice">￥3599</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="scrrow7"></i>
+						<p class="newprice"><span>￥</span>198</p>
+						<p class="oldprice">￥399</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="scrrow8"></i>
+						<p class="newprice"><span>￥</span>99</p>
+						<p class="oldprice">￥159</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="scrrow9"></i>
+						<p class="newprice"><span>￥</span>78</p>
+						<p class="oldprice">￥198</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="scrrow10"></i>
+						<p class="newprice"><span>￥</span>428</p>
+						<p class="oldprice">￥899</p>
+					</a>
+				</li>
+				<li>
+					<i></i><p>查看全部</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 京东秒杀结束-->
+
+    <!-- 超市狂欢购 -->
+	<div class="superMarket">
+		<a href="#" class="khuan"></a>
+		<a href="#" class="advance"></a>
+		<ul class="products">
+			<li>
+				<a href="#">
+					<i class="pro1"></i>
+					<h3>品牌狂欢</h3>
+					<p>低至7折</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="pro2"></i>
+					<h3>餐桌椅榜</h3>
+					<p>舒适用餐</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="pro3"></i>
+					<h3>潮色美瞳</h3>
+					<p>眼彩迷人</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="pro4"></i>
+					<h3>精选笔类</h3>
+					<p>选你最爱</p>
+				</a>
+			</li>		
+		</ul>
+	</div>
+    <!-- 超市狂欢购结束 -->
+    <!-- 双十一推荐 -->
+    <div class="tuijian">
+    	<h1></h1>
+    	<ul>
+    		<li>
+    			<a href="#">
+	    			<i class="bg1"></i>
+	    			<div>
+	    				<h3>京东医药</h3>
+						<p>111减100</p>
+	    			</div>
+    			</a>	
+    		</li>
+			<li>
+    			<a href="#">
+	    			<i class="bg2"></i>
+	    			<div>
+	    				<h3>时尚女装</h3>
+						<p>跨店3免1</p>
+	    			</div>
+    			</a>	
+    		</li>
+    		<li>
+    			<a href="#">
+	    			<i class="bg3"></i>
+	    			<div>
+	    				<h3>品质家电</h3>
+						<p>抢5折尖货</p>
+	    			</div>
+    			</a>	
+    		</li>
+    		<li>
+    			<a href="#">
+	    			<i class="bg4"></i>
+	    			<div>
+	    				<h3>手机狂欢</h3>
+						<p>手机5折秒</p>
+	    			</div>
+    			</a>	
+    		</li>
+    		<li>
+    			<a href="#">
+	    			<i class="bg5"></i>
+	    			<div>
+	    				<h3>电脑数码</h3>
+						<p>爆款5折抢</p>
+	    			</div>
+    			</a>	
+    		</li>
+    		<li>
+    			<a href="#">
+	    			<i class="bg6"></i>
+	    			<div>
+	    				<h3>图书文娱</h3>
+						<p>满200减100</p>
+	    			</div>
+    			</a>	
+    		</li>
+    		<li>
+    			<a href="#">
+	    			<i class="bg7"></i>
+	    			<div>
+	    				<h3>大牌奶粉</h3>
+						<p>抢券99减98</p>
+	    			</div>
+    			</a>	
+    		</li>
+    		<li>
+    			<a href="#">
+	    			<i class="bg8"></i>
+	    			<div>
+	    				<h3>洗发护发</h3>
+						<p>抢149减100</p>
+	    			</div>
+    			</a>	
+    		</li>
+    		<li>
+    			<a href="#">
+	    			<i class="bg9"></i>
+	    			<div>
+	    				<h3>品牌狂欢</h3>
+						<p>满199减100</p>
+	    			</div>
+    			</a>	
+    		</li>
+    		<li>
+    			<a href="#">
+	    			<i class="bg10"></i>
+	    			<div>
+	    				<h3>爆品直降</h3>
+						<p>超级单品日</p>
+	    			</div>
+    			</a>	
+    		</li>
+    		<li>
+    			<a href="#">
+	    			<i class="bg11"></i>
+	    			<div>
+	    				<h3>电视影音</h3>
+						<p>领券享优惠</p>
+	    			</div>
+    			</a>	
+    		</li>
+    		<li>
+    			<a href="#">
+	    			<i class="bg12"></i>
+	    			<div>
+	    				<h3>影音影像</h3>
+						<p>相机5折起</p>
+	    			</div>
+    			</a>	
+    		</li>
+    	</ul>
+    </div>
+    <!-- 双十一推荐结束 -->
+
+	<div class="litterGarden">
+		<h1></h1>
+		<ul>
+			<li>
+				<a href="#">
+					<h2>—篮球本命—</h2>
+					<p>一起打球鞋很重要</p>
+					<div>
+						<i class="bg1"></i>
+						<i class="bg2"></i>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h2>—孕妈护理—</h2>
+					<p>孕期护肤美妆</p>
+					<div>
+						<i class="bg3"></i>
+						<i class="bg4"></i>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<ul>
+			<li class="litterLi2">
+				<a href="#">
+					<h2>畅快奔跑</h2>
+					<p>跑步装备库</p>
+					<i class="bg5"></i>
+				</a>
+			</li>
+			<li class="litterLi2">
+				<a href="#">
+					<h2>健美丽人</h2>
+					<p>我要马甲线</p>
+					<i class="bg6"></i>
+				</a>
+			</li>
+			<li class="litterLi2">
+				<a href="#">
+					<h2>保养爱车</h2>
+					<p>养车无难事</p>
+					<i class="bg7"></i>
+				</a>
+			</li>
+			<li class="litterLi2">
+				<a href="#">
+					<h2>精美客厅</h2>
+					<p>客厅有讲究</p>
+					<i class="bg8"></i>
+				</a>
+			</li>
+		</ul>
+		<div class="qingchang"></div>
+	</div>
+	<!-- 爱生活 -->
+	<div class="loveLife">
+		<h1></h1>
+		<ul>
+			<li>
+				<a href="#">
+					<h2>玩3C</h2>
+					<p>好物不止五折 冲鸭！！！</p>
+					<div>
+						<i class="bg1"></i>
+						<i class="bg2"></i>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h2>京东家电</h2>
+					<p>家电狂欢 京彩有你</p>
+					<div>
+						<i class="bg3"></i>
+						<i class="bg4"></i>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h2>京东超市</h2>
+					<p>超市大放价 抢超值好货</p>
+					<div>
+						<i class="bg5"></i>
+						<i class="bg6"></i>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h2>爱家</h2>
+					<p>家纺热卖 部分低至9.9元</p>
+					<div>
+						<i class="bg7"></i>
+						<i class="bg8"></i>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<ul class="secondUl">
+			<li class="secondLi">
+				<a href="#">
+					<h2>家有萌宝</h2>
+					<p>低至5折</p>
+					<div>
+						<i class="bg9"></i>
+					</div>
+				</a>
+			</li>
+			<li class="secondLi">
+				<a href="#">
+					<h2>美妆馆</h2>
+					<p>领免费试用</p>
+					<div>
+						<i class="bg10"></i>
+					</div>
+				</a>
+			</li>
+			<li class="secondLi">
+				<a href="#">
+					<h2>爱吃</h2>
+					<p>9.9包邮</p>
+					<div>
+						<i class="bg11"></i>
+					</div>
+				</a>
+			</li>
+			<li class="secondLi">
+				<a href="#">
+					<h2>时尚衣橱</h2>
+					<p>做百变女神</p>
+					<div>
+						<i class="bg12"></i>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 为你推荐 -->
+	<div class="sujest">
+		<div class="title">
+			<i></i>
+			<span>为您推荐</span>
+		</div>
+		<ul>
+			<li>
+				<div class="image">
+					<img src="img/quanmai.dpg">
+					<span>每满99减50(11.10-11.12)</span>
+				</div>
+				<div class="name">
+					<i class="market"></i>
+					英国进口 麦维他（Mcvitie's）原味全麦粗粮酥性消化饼干 400g早餐下午茶零食
+				</div>
+				<div class="price">
+					<span>￥19.9</span>
+					<h5>满减</h5>
+					<a href="#">看相似</a>
+				</div>
+			</li>
+			<li>
+				<div class="image">
+					<img src="img/pro2.dpg">
+					<!-- <span>每满99减50(11.10-11.12)</span> -->
+				</div>
+				<div class="name">
+					<i class="market"></i>
+					满199减120三只松鼠 草莓干106g休闲零食蜜饯果脯水果干办公室零食
+				</div>
+				<div class="price">
+					<span>￥22.9</span>
+					<!-- <h5>满减</h5> -->
+					<a href="#">看相似</a>
+				</div>
+			</li>
+			<li>
+				<div class="image">
+					<img src="img/pro3.dpg">
+					<!-- <span>每满99减50(11.10-11.12)</span> -->
+				</div>
+				<div class="name">
+					<i></i>
+					梅品味 日式话梅饼100g 酸梅肉蜜饯果干陈皮梅子干 孕妇酸零食 青梅休闲零食办公食品酸话梅干 紫苏梅饼
+				</div>
+				<div class="price">
+					<span>￥19.8</span>
+					<!-- <h5>满减</h5> -->
+					<a href="#">看相似</a>
+				</div>
+			</li>
+			<li>
+				<div class="image">
+					<img src="https://img13.360buyimg.com/n7/jfs/t27700/75/275166438/168785/80f7e96f/5b8cd5edN8eb5f2d6.jpg!q70.dpg">
+					<!-- <span>每满99减50(11.10-11.12)</span> -->
+				</div>
+				<div class="name">
+					<i></i>
+					英国进口 麦维他（Mcvitie's）原味全麦粗粮酥性消化饼干 400g 早餐下午茶零食
+				</div>
+				<div class="price">
+					<span>￥19.9</span>
+					<h5>满减</h5>
+					<a href="#">看相似</a>
+				</div>
+			</li>
+			<li>
+				<div class="image">
+					<img src="https://img13.360buyimg.com/n7/jfs/t29545/361/270950220/83071/9c9a6341/5bed379cNed6f0f5e.jpg!q70.dpg">
+					<!-- <span>每满99减50(11.10-11.12)</span> -->
+				</div>
+				<div class="name">
+					<i></i>
+					英国进口 麦维他（Mcvitie's）原味全麦粗粮酥性消化饼干 400g 早餐下午茶零食
+				</div>
+				<div class="price">
+					<span>￥19.9</span>
+					<h5>满减</h5>
+					<a href="#">看相似</a>
+				</div>
+			</li>
+			<li>
+				<div class="image">
+					<img src="https://img13.360buyimg.com/n7/jfs/t24376/14/2503296522/423330/f2791b36/5b84bf6cNc1b22938.jpg!q70.dpg">
+					<!-- <span>每满99减50(11.10-11.12)</span> -->
+				</div>
+				<div class="name">
+					<i></i>
+					英国进口 麦维他（Mcvitie's）原味全麦粗粮酥性消化饼干 400g 早餐下午茶零食
+				</div>
+				<div class="price">
+					<span>￥19.9</span>
+					<h5>满减</h5>
+					<a href="#">看相似</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>

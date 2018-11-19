@@ -1,0 +1,2313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东拼购</title>
+    <link rel="stylesheet" type="text/css" href="style/collection.css">
+    <link rel="icon" href="https://m.jd.com/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css">
+    <script src="js/collection.js"></script>
+	<script type="text/javascript">
+		var pixelRatio = 1 / window.devicePixelRatio;    //还原设备的真实分辨率；  
+		//devicePixelRatio设备的像素比；     
+		document.write('<meta name="viewport" content="width=device-width,initial-scale='+pixelRatio+',minimum-scale='+pixelRatio+',maximum-scale='+pixelRatio+'" />');
+		var html=document.getElementsByTagName('html')[0];
+		var pageWidth=html.getBoundingClientRect().width;
+		html.style.fontSize=pageWidth/10+"px";
+
+		function checkMenu(tag){
+			var menuitems = document.getElementsByClassName("menuitem");
+			var pages = document.getElementsByClassName("pubPageContain");
+
+			for(var i=0;i<menuitems.length;i++){
+				if(menuitems[i] == tag){
+					menuitems[i].style.borderBottom = "0.05333333rem solid #EC3B3D";
+					menuitems[i].style.color = "#EC3B3D";
+					pages[i].style.display = "block";
+				}else{
+					menuitems[i].style.borderBottom = "none";
+					menuitems[i].style.color = "#666";
+					pages[i].style.display = "none";
+				}
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<header class="head">
+		<a href="javascript:history.go(-1);" class="back"></a>
+		<p>京东拼购</p>
+		<a href="javascript:;" class="menu"></a>
+	</header>
+	<ul class="windowMenu">
+    	<li>
+    		<a href="index.html">
+    			<img src="img/winmenu1.png">
+    			<span>首页</span>
+    		</a>
+    	</li>
+    	<li>
+    		<a href="classify.html">
+    			<img src="img/winmenu2.png">
+    			<span>分类搜索</span>
+    		</a>
+    	</li>
+    	<li>
+    		<a href="shoppingCart.html">
+    			<img src="img/winmenu3.png">
+    			<span>购物车</span>
+    		</a>
+    	</li>
+    	<li>
+    		<a href="login.html">
+    			<img src="img/winmenu4.png">
+    			<span>我的京东</span>
+    		</a>
+    	</li>
+    	<li>
+    		<a href="#">
+    			<img src="img/winmenu5.png">    			
+    			<span>浏览记录</span>
+    		</a>
+    	</li>
+    </ul>
+	<div class="footmenu">
+		<a href="index.html">
+			<div>
+				<img src="https://m.360buyimg.com/mobilecms/jfs/t18526/211/696109898/3876/a61be82c/5aa10cd2N1318ac50.png">
+			</div>
+		</a>
+		<a href="classify.html">
+			<div>
+				<img src="https://m.360buyimg.com/mobilecms/jfs/t19183/49/696491919/3763/dec8cceb/5aa10cdbNa9cd0320.png">
+			</div>
+		</a>
+		<a href="#">
+			<div>
+				<img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t25261/337/1250179439/2765/db2976c3/5b8e4ac3N749fb56e.png" >
+			</div>
+		</a>
+		<a href="shoppingCart.html">
+			<div>
+				<img src="https://m.360buyimg.com/mobilecms/jfs/t18583/69/717127328/4407/5e47882b/5aa10ceaN649eec12.png">
+			</div>
+		</a>
+		<a href="login.html">
+			<div>
+				<img src="https://m.360buyimg.com/mobilecms/jfs/t17782/11/2358895717/4684/ad19de7f/5af43af1N04ef5a16.png">
+			</div>
+		</a>
+	</div>
+    <div class="search">
+    	<i></i>
+    	<input type="text" placeholder="搜索拼购商品" style="outline: none;"></input>
+    	<i class="clear"></i>
+    </div>
+
+    <div class="containAll">
+            
+            <!-- 滚动菜单 -->
+        	<div class="scrowContain">
+	    		<div class="menuContain">
+		    		<ul class="mainMenu">
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)"
+		    				style="color: #EC3B3D;border-bottom: 0.05333333rem solid #EC3B3D">精选</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">配饰</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">生活</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">家电</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">日用</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">美妆</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">服饰</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">内衣</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">数码</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">居家</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">食品</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">生鲜</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">鞋包</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">手机</a>
+		    			</li>
+		    			<li>
+		    				<a href="#" class="menuitem" onclick="checkMenu(this)">母婴</a>
+		    			</li>
+		    		</ul>
+	    		</div>
+    		</div>
+
+    		<!-- <div class="scrowContain">
+    			<div class="menuContain">
+    				<div class="mainMenu">
+    					<a href="#" class="menuitem" onclick="checkMenu(this)"
+		    				style="color: #EC3B3D;border-bottom: 0.05333333rem solid #EC3B3D">精选</a>
+		    			<a href="#" class="menuitem" onclick="checkMenu(this)">配饰</a>
+		    			<a href="#" class="menuitem" onclick="checkMenu(this)">生活</a>
+		    			<a href="#" class="menuitem" onclick="checkMenu(this)">家电</a>
+						<a href="#" class="menuitem" onclick="checkMenu(this)">日用</a>
+						<a href="#" class="menuitem" onclick="checkMenu(this)">美妆</a>
+						<a href="#" class="menuitem" onclick="checkMenu(this)">服饰</a>
+						<a href="#" class="menuitem" onclick="checkMenu(this)">内衣</a>
+						<a href="#" class="menuitem" onclick="checkMenu(this)">数码</a>
+						<a href="#" class="menuitem" onclick="checkMenu(this)">居家</a>
+						<a href="#" class="menuitem" onclick="checkMenu(this)">食品</a>
+						<a href="#" class="menuitem" onclick="checkMenu(this)">生鲜</a>
+						<a href="#" class="menuitem" onclick="checkMenu(this)">鞋包</a>
+						<a href="#" class="menuitem" onclick="checkMenu(this)">手机</a>
+						<a href="#" class="menuitem" onclick="checkMenu(this)">母婴</a>
+    				</div>
+    			</div>
+    		</div> -->
+             
+            <!-- “精选”布局 -->
+			<div class="pubPageContain" style="display: block;">
+				<!-- swiper插件轮播图 -->
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+					    <div class="swiper-slide">
+					    	<a href="#">
+					   			<img src="https://img11.360buyimg.com/mcoss/jfs/t28678/47/166982686/44082/931fb9c0/5bea5144Nb4f2d19e.gif">		
+					   		</a>
+					    </div>
+					    <div class="swiper-slide">
+					    	<a href="#">
+					    		<img src="https://img20.360buyimg.com/mcoss/jfs/t29458/114/217087294/71199/2efb5df0/5beb8ae3Ne4470ad9.jpg!q70.dpg">
+					    	</a>
+					    </div>
+					    <div class="swiper-slide">
+					    	<a href="#">
+					    		<img src="https://img12.360buyimg.com/mcoss/jfs/t29200/363/236753942/64354/319bf21/5bebef71Ne7e04537.jpg!q70.dpg">
+					    	</a>
+					    </div>
+				    </div>
+			    <!-- 添加分页器 -->
+			    	<div class="swiper-pagination" id="white"></div>
+			  	</div>
+	  			
+				<!-- 中部菜单 -->
+				<div id="menu">
+					<ul>
+						<li><a href="#"><img src="https://img12.360buyimg.com/jdphoto/s80x80_jfs/t29209/36/208626535/7315/dfb154cb/5bea93e7N8faf6e18.png!q70"><p>9.9包邮</p></a></li>
+						<li><a href="#"><img src="https://img12.360buyimg.com/jdphoto/s80x80_jfs/t28360/31/187321657/8067/b00bd67c/5bea93e8N2f754d40.png!q70"><p>1元福利</p></a></li>
+						<li><a href="#"><img src="https://img12.360buyimg.com/jdphoto/s80x80_jfs/t30316/178/185538813/7692/58d5fbb2/5bea93e8Nf0dcaf65.png!q70"><p>好货清单</p></a></li>
+						<li><a href="#"><img src="https://img12.360buyimg.com/jdphoto/s80x80_jfs/t29845/40/190839653/7455/d5f26b1f/5bea93e8N5a3151a4.png!q70"><p>自营优选</p></a></li>
+						<li><a href="#"><img src="https://img12.360buyimg.com/jdphoto/s80x80_jfs/t28687/47/187174954/7536/48a77954/5bea93e8Ncafbbaa3.png!q70"><p>逛超市</p></a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><img src="https://img12.360buyimg.com/jdphoto/s80x80_jfs/t25258/211/2619203509/7888/ab52a927/5bea9ef8N7cd0ba9b.png!q70"><p>名品特卖</p></a></li>
+						<li><a href="#"><img src="https://img12.360buyimg.com/jdphoto/s80x80_jfs/t27853/207/1633581394/7454/af7cee6d/5bea9ef9Ncc4dab10.png!q70"><p>工厂直供</p></a></li>
+						<li><a href="#"><img src="https://img12.360buyimg.com/jdphoto/s80x80_jfs/t26683/72/1731178233/7209/6a7c08ec/5bea9ef8N34c2f3bc.png!q70"><p>砍价免费领</p></a></li>
+						<li><a href="#"><img src="https://img12.360buyimg.com/jdphoto/s80x80_jfs/t27433/145/1711047629/6786/398e8147/5bea9ef8Na3f07d8e.png!q70"><p>签到领红包</p></a></li>
+						<li><a href="#"><img src="https://img12.360buyimg.com/jdphoto/s80x80_jfs/t27670/228/1740550201/7719/57bd39e1/5bea9ef9N1b1198d4.png!q70"><p>限时5折</p></a></li>
+					</ul>
+				</div>
+
+				<div class="menuGif">
+					<a href="#">
+						<img src="https://img11.360buyimg.com/mcoss/jfs/t29287/268/192502907/98295/4810ffbb/5beaa43dNd89aee1b.gif">
+					</a>
+				</div>
+				<div class="detail">
+					<a href="#">
+						<h5>
+							<span>今日</span>必拼
+							<h6>距本场结束</h6>
+						</h5>
+						<div class="time">
+							<span class="hour">00</span><small></small>
+							<span class="minute">14</span><small></small>
+							<span class="second">23</span>
+						</div>
+						<p>查看更多</p>
+						<i></i>
+					</a>
+				</div>
+				<!-- 第二个轮播图 -->
+				<div class="swiper-container" id="secondMenu">
+				    <div class="swiper-wrapper">
+					    <div class="swiper-slide">
+					    	<ul>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img14.360buyimg.com/evalpic/s240x240_jfs/t1/7240/15/1592/602063/5bced923E485320bb/4c59a505b7a30bb6.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>8</big>.90</small>
+					    				</div>
+					    				<p>已拼14.5万件</p>
+					    			</a>
+					    		</li>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img12.360buyimg.com/evalpic/s240x240_jfs/t1/2854/22/11025/381943/5bcd7652Ec7e54d53/b491116f0749f77a.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>2</big>.90</small>
+					    				</div>
+					    				<p>已拼13.6万件</p>
+					    			</a>
+					    		</li>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img12.360buyimg.com/evalpic/s240x240_jfs/t30151/332/211933218/262186/9311425a/5bebb1a1Ncd70882d.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>25</big>.90</small>
+					    				</div>
+					    				<p>已拼1721件</p>
+					    			</a>
+					    		</li>
+					    	</ul>
+					    </div>
+						<div class="swiper-slide">
+					    	<ul>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img12.360buyimg.com/evalpic/s240x240_jfs/t1/1947/8/12031/578816/5bd1873dE17ae7010/926f8a4a0bf72651.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>99</big>.00</small>
+					    				</div>
+					    				<p>已拼468件</p>
+					    			</a>
+					    		</li>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img14.360buyimg.com/evalpic/s240x240_jfs/t1/1440/36/11656/191331/5bd03d2dE9d2e8221/d5f8b5b2292804ac.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>9</big>.90</small>
+					    				</div>
+					    				<p>已拼2.8万件</p>
+					    			</a>
+					    		</li>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img12.360buyimg.com/evalpic/s240x240_jfs/t1/2226/38/12021/148189/5bd2785eE3bfde913/4bd45902f0c061e5.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>99</big>.00</small>
+					    				</div>
+					    				<p>已拼135件</p>
+					    			</a>
+					    		</li>
+					    	</ul>
+					    </div>
+					    <div class="swiper-slide">
+					    	<ul>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img14.360buyimg.com/evalpic/s240x240_jfs/t25744/69/2285225697/296023/a951be99/5bc81855N6301cd67.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>17</big>.90</small>
+					    				</div>
+					    				<p>已拼3509件</p>
+					    			</a>
+					    		</li>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img10.360buyimg.com/evalpic/s240x240_jfs/t1/6882/38/4345/238597/5bd92437E919bbad1/fbce144d6f8b8e3c.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>6</big>.40</small>
+					    				</div>
+					    				<p>已拼1.6万件</p>
+					    			</a>
+					    		</li>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img13.360buyimg.com/evalpic/s240x240_jfs/t27448/70/1072034658/169835/90af2bc3/5bc0583bNc4654712.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>15</big>.80</small>
+					    				</div>
+					    				<p>已拼3191件</p>
+					    			</a>
+					    		</li>
+					    	</ul>
+					    </div>
+					    <div class="swiper-slide">
+					    	<ul>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img14.360buyimg.com/evalpic/s240x240_jfs/t1/2568/13/16142/359387/5be12e9dE458fc850/602e82738917d600.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>5</big>.90</small>
+					    				</div>
+					    				<p>已拼9.2万件</p>
+					    			</a>
+					    		</li>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img12.360buyimg.com/evalpic/s240x240_jfs/t27004/144/1062106864/206348/62df12ca/5bc005d0Na41ec714.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>9</big>.90</small>
+					    				</div>
+					    				<p>已拼2.2万件</p>
+					    			</a>
+					    		</li>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img14.360buyimg.com/evalpic/s240x240_jfs/t26611/114/651738235/335736/b093554d/5bb4762dNcf54d704.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>69</big>.90</small>
+					    				</div>
+					    				<p>已拼2931件</p>
+					    			</a>
+					    		</li>
+					    	</ul>
+					    </div>
+					    <div class="swiper-slide">
+					    	<ul>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img12.360buyimg.com/evalpic/s240x240_jfs/t25339/289/2632882976/237690/8ee4ea58/5bebd51aNe0f2a274.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>68</big>.00</small>
+					    				</div>
+					    				<p>已拼2970件</p>
+					    			</a>
+					    		</li>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img13.360buyimg.com/evalpic/s240x240_jfs/t1/2568/13/16142/359387/5be12e9dE458fc850/602e82738917d600.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>5</big>.90</small>
+					    				</div>
+					    				<p>已拼9.2万件</p>
+					    			</a>
+					    		</li>
+					    		<li>
+					    			<a href="#">
+					    				<img src="https://img12.360buyimg.com/evalpic/s240x240_jfs/t1/6670/27/4976/235567/5bdb2a30Ec9161099/c12e2b0a1405a023.jpg!q70.dpg">
+					    				<div>
+					    					<span>2人拼</span>&nbsp;
+					    					<small>￥<big>9</big>.90</small>
+					    				</div>
+					    				<p>已拼18.1件</p>
+					    			</a>
+					    		</li>
+					    	</ul>
+					    </div>
+				    </div>
+				    <!-- 添加分页器 -->
+				    <div class="swiper-pagination" id="secondwhite"></div>
+				    	<script src="dist/js/swiper.min.js"></script>
+						<script>
+						    var swiper = new Swiper('.swiper-container', {
+							    // 分页器
+							    pagination: {
+							        el: '.swiper-pagination',
+							        clickable:true,
+							    },
+							    // 循环播放
+							    loop:true,
+							    // 自动播放
+							    autoplay:{
+							     	delay:3000,
+							     	// 点击swiper时自动播放不停止
+							     	disableOnInteraction:false,
+							     },
+						    });
+						</script> 
+			  	</div>
+				
+				<ul class="pintemai">
+					<li>
+						<h5>9.9元<span>拼</span></h5>
+						<div class="firstpin">
+							<a href="#">
+								<img src="https://img12.360buyimg.com/evalpic/s240x240_jfs/t1/6469/20/1574/414746/5bcd626dE91a69216/6ce2bf105cf68a7d.jpg!q70.dpg">
+								<h6>工厂直供</h6>
+								<p>
+					    			<span>2人拼</span>
+					    			<small>￥<big>9</big>.90</small>
+					    		</p>
+							</a>
+						</div>
+						<div>
+							<a href="#">
+								<img src="https://img13.360buyimg.com/evalpic/s240x240_jfs/t1/5867/3/11108/135437/5bce97b5E62ae22cf/caf1df1bdaec5bf8.jpg!q70.dpg">
+								<h6>当天现捡</h6>
+								<p>
+					    			<span>2人拼</span>
+					    			<small>￥<big>9</big>.90</small>
+					    		</p>
+							</a>
+						</div>
+					</li>
+					<li>
+						<h5>名品<span>特卖</span></h5>
+						<div class="firstpin">
+							<a href="#">
+								<img src="https://img14.360buyimg.com/evalpic/s240x240_jfs/t25030/79/2326164642/74893/8f37e335/5be42856Nb025d711.jpg!q70.dpg">
+                                <img src="https://img12.360buyimg.com/evalpic/s240x240_jfs/t25066/46/2376108846/9228/6e37b0f7/5be4284aN5a36941c.jpg!q70.dpg" class="targit">
+								<h6 class="temai">低至71元</h6>
+							</a>
+						</div>
+						<div>
+							<a href="#">
+								<img src="https://img14.360buyimg.com/evalpic/s240x240_jfs/t1/6413/24/4496/101003/5bd9762eEfea0d9dc/bdd8c2701977e07a.jpg!q70.dpg">
+								<img src="https://img12.360buyimg.com/evalpic/s240x240_jfs/t1/3449/4/13931/16648/5bd97620Ecde12e11/039fce6340431f10.jpg!q70.dpg" class="targit">
+								<h6 class="temai">爆款低至2折</h6>
+							</a>
+						</div>
+					</li>
+				</ul>
+                
+                <div class="baokuan">
+                	<a href="#">
+                		<img src="https://img12.360buyimg.com/mcoss/jfs/t27052/236/1803971707/64171/d602e989/5bee5de5Nebdaa088.png!q70">
+                	</a>
+                </div>
+				
+				<div class="everyday">
+					<h3>每日好货上新</h3>
+					<h6>专属超值好货推荐</h6>
+				</div>
+				<div class="everyDayPin">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="https://img10.360buyimg.com/evalpic/s400x400_jfs/t1/5591/18/12976/132086/5bd5b971E7eed1aa2/460f05fb1ea6b34f.jpg!q70.dpg">
+								<p class="stamp red">爆款拼购</p>
+								<div>
+									<h1>【三秒速热 细腻柔软】冬季毛毯保暖床单珊瑚绒毛毯法兰绒床单人加厚午休毯子 雨中思情 70*100cm【膝盖毯】</h1>
+									<div>
+										<span class="pintehui">包邮特惠</span>
+										<span class="pinbaokuan">爆款拼购</span>
+									</div>
+									<p>
+						    			<span>2人拼</span>
+						    			<small>￥<big>9</big>.90</small>
+					    			</p>
+					    			<span class="yipin">已拼1.6万件</span>
+					    			<span class="kaituan">去开团</span>
+					    		</div>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="https://img12.360buyimg.com/evalpic/s400x400_jfs/t1/7376/6/5803/88833/5be1541bEfa98fc0f/f94e63bcd75a52f5.jpg!q70.dpg">
+								<p class="stamp yellow">优质保暖</p>
+								<div>
+									<h1>【三秒速热 细腻柔软】冬季毛毯保暖床单珊瑚绒毛毯法兰绒床单人加厚午休毯子 雨中思情 70*100cm【膝盖毯】【优质保暖】围巾女2018秋冬仿羊绒围巾流苏披肩格子女士围脖长款围巾 红色</h1>
+									<div>
+										<span class="pintehui">送包装盒</span>
+										<span class="pinbaokuan">优质保暖</span>
+									</div>
+									<p>
+						    			<span>2人拼</span>
+						    			<small>￥<big>15</big>.90</small>
+					    			</p>
+					    			<span class="yipin">已拼401件</span>
+					    			<span class="kaituan">去开团</span>
+					    		</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="https://img12.360buyimg.com/evalpic/s400x400_jfs/t1/1258/21/9141/255135/5bac42bdE6ca92c4d/5cc5de0154dd3324.jpg!q70.dpg">
+								<p class="stamp blue">送给心爱的人</p>
+								<div>
+									<h1>俞兆林 秋衣秋裤男女全棉圆领情侣纯棉保暖内衣弹力时尚薄款保暖套装秋冬打底棉麻毛衫 深灰色 男（2018新款升级全棉） XXL</h1>
+									<div>
+										<span class="pintehui">全棉保暖套装</span>
+										<span class="pinbaokuan">送给心爱的人</span>
+									</div>
+									<p>
+						    			<span>2人拼</span>
+						    			<small>￥<big>39</big>.90</small>
+					    			</p>
+					    			<span class="yipin">已拼7696件</span>
+					    			<span class="kaituan">去开团</span>
+					    		</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="https://img13.360buyimg.com/evalpic/s400x400_jfs/t1/843/12/12283/247902/5bd193cbE59e7d9e9/aff767b494f0191e.jpg!q70.dpg">
+								<div>
+									<h1>【今天买一套送一套=6只】家用包饺子机器 包皮模具 包饺子神器模具夹 厨房DIY 小工具 1套3个装 多彩</h1>
+									<div>
+										<span class="pintehui">买一送一</span>
+										<span class="pinbaokuan">包饺子神器</span>
+									</div>
+									<p>
+						    			<span>2人拼</span>
+						    			<small>￥<big>6</big>.90</small>
+					    			</p>
+					    			<span class="yipin">已拼1245件</span>
+					    			<span class="kaituan">去开团</span>
+					    		</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- 配饰布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img13.360buyimg.com/jdphoto/s72x72_jfs/t18751/254/660826817/25820/18061401/5a9e5b49Ncf0fe029.png!q70.webp">
+							<p>钟表</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img14.360buyimg.com/jdphoto/jfs/t26788/344/475617215/3156/47df6564/5baf3d95Nbc2b652f.jpg!q70.dpg">
+							<p>礼品鲜花</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/jfs/t16438/320/2419856303/23663/9d0f6e06/5aa7a21cN1047b5bc.png!q70.webp">
+							<p>潮流搭配</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img20.360buyimg.com/jdphoto/s72x72_jfs/t18274/115/654837810/26274/f7c992cf/5a9e58b7N8bd3d874.png!q70.webp">
+							<p>饰品首饰</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t24763/65/765842771/169426/f9e747e4/5b7ace29N19d9f43a.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									束鹿故事 手套女触屏不倒绒时尚百搭保暖冬季手套耐磨防风防寒加绒加厚学生冬天开车骑车手套 断刀毛球-豆沙色 均码
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>24</big>.00</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t24994/99/2621060457/442468/4ca3ffd9/5bea2c3bNacb922cb.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									口罩男潮款个性女韩版儿童明星防尘透气可清洗易呼吸防尘秋冬季透气黑色 黑色鹿晗同款口罩6件
+                            
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>16</big>.90</small>
+									<p>已拼697件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t25141/334/794963633/216385/994febbb/5b7cbcf9N894b37c8.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									昆仑子玉平安扣男女款玉吊坠吊坠戴绳子男吊坠玉项链
+                            
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>19</big>.90</small>
+									<p>已拼335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t1/1204/32/15110/114330/5bdd6a93Ef589cf50/dd342ed11966a86a.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									万火比心猪 生日礼物 女生圣诞节礼物抖音同款创意实用送情侣闺蜜女友男朋友老婆的创意七彩硅胶拍拍小夜灯 拍拍款
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>48</big>.00</small>
+									<p>已拼461件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t5275/172/13039233/266636/98f27700/58f700a5N060544ed.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									恒源祥春秋冬季新款女士羊毛围巾加厚保暖女冬季羊羔绒大披肩加厚两用纯色长款围脖 LWL100-9988-1大红- 200*7
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>188</big>.00</small>
+									<p>已拼62件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t25519/87/1765101666/522910/9a548da8/5bbbc0edN451d08c2.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									个性流行可爱小熊耳钉女气质甜美耳饰品日韩简约配饰品 可爱小熊人工锆石耳钉
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>19</big>.90</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 生活布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t21799/268/561271024/9161/b3a9c067/5b114305N47a96582.png!q70.webp">
+							<p>图书音像</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t20134/260/592502637/7519/37244baf/5b114381Ne689e523.png!q70.webp">
+							<p>绿植宠物</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img30.360buyimg.com/jdphoto/s72x72_jfs/t20089/154/994798366/10075/78972604/5b11432dNcf77b60d.png!q70.webp">
+							<p>办公文具</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t20002/343/1009756681/8371/ff9f8c9/5b1142b4N33af7eac.png!q70.webp">
+							<p>汽车用品</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t6010/111/5204328675/225582/16e58527/5969cfffNce23b956.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									小熊宝宝行为养成绘本系列全10册 儿童情绪管理与培养绘本 0-3岁好习惯养成儿童睡前故事绘本
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>14</big>.80</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t24907/218/2672021306/168314/3f222c27/5bed3497N202df28f.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									得力（deli）8308 A4 透明按扣文件袋白色 10只装  办公用品
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼151件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t1/10090/19/3245/134241/5be2f7dcEc952131c/c67a6ea7ae83f233.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									【第二件五折】汽车头枕颈枕 四季车用靠枕 车载枕头 脖子护枕 内饰用品 黑色【单个装】第二件五折
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼2335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t21571/361/2373513340/150767/ce2a340c/5b52beffNc5028647.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									思维导图伴你学小学 语文数学英语知识清单 小学生思维训练
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>26</big>.00</small>
+									<p>已拼46件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t1/10167/2/2065/200185/5bdff032Ed39b366a/f30d2dcab111b7f1.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									汽车拖车绳3米3吨双层加厚 汽车小车救援车用拉车强力牵引绳子强力拖车带 拖车绳 单条
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼272件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t24712/332/2010609893/93346/2ed69f7a/5bc16b56N7beadfcf.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									迈升 行驶证驾驶证皮套驾照本超薄女款男士机动车行车证多功能二合一证件包摩托车驾照夹一体包汽车用品 驾驶证、行驶证（二合一）
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>6</big>.80</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 家电布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t18226/13/658999798/4703/648c9b30/5a9e48d1Nc98464ec.png!q70.webp">
+							<p>个护健康</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img30.360buyimg.com/jdphoto/s72x72_jfs/t15691/284/2294357191/7227/5afca930/5a9e493dN0cc020ce.png!q70.webp">
+							<p>生活电器</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t17443/98/654562153/6685/810b7f41/5a9e4a58N9cf2eac4.png!q70.webp">
+							<p>大家电</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img13.360buyimg.com/jdphoto/s72x72_jfs/t15034/211/2419261299/8146/3f8f779c/5a9e499dN485f67a1.png!q70.webp">
+							<p>厨房小电</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t23530/195/2138311966/174621/2c4f56e/5b7512d6Nc573a9df.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									小熊宝宝行为养成绘本系列全10册 儿童情绪管理与培养绘本 0-3岁好习惯养成儿童睡前故事绘本
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>14</big>.80</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t24007/17/1727033728/406745/682dfc1c/5b681772N41a0fe3e.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									得力（deli）8308 A4 透明按扣文件袋白色 10只装  办公用品
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼151件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t18307/348/1519288262/200024/e56a4fea/5acddd65N7459dfca.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									【第二件五折】汽车头枕颈枕 四季车用靠枕 车载枕头 脖子护枕 内饰用品 黑色【单个装】第二件五折
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼2335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t25201/239/106539919/230052/71a8200c/5b6569cbN4d5cc656.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									思维导图伴你学小学 语文数学英语知识清单 小学生思维训练
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>26</big>.00</small>
+									<p>已拼46件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t24661/102/2243357370/200136/d45f7f6f/5bee30a7N881dc54b.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									汽车拖车绳3米3吨双层加厚 汽车小车救援车用拉车强力牵引绳子强力拖车带 拖车绳 单条
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼272件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t11365/304/390408552/401997/5e4c3eb6/59eef649N6cf52425.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									迈升 行驶证驾驶证皮套驾照本超薄女款男士机动车行车证多功能二合一证件包摩托车驾照夹一体包汽车用品 驾驶证、行驶证（二合一）
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>6</big>.80</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 日用布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t20248/277/544990030/2392/b629e28d/5b11376fN80027345.jpg!q70.dpg">
+							<p>洗发护发</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t20347/72/583580697/2398/b9072860/5b113708N2f1575a5.jpg!q70.dpg">
+							<p>清洁用品</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img20.360buyimg.com/jdphoto/s72x72_jfs/t22363/131/554661914/7160/9632fd9a/5b11368cNf3c53263.png!q70.webp">
+							<p>纸巾湿巾</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img13.360buyimg.com/jdphoto/jfs/t17164/289/764689575/28116/99aa80bd/5aa7a1e4Nad3751f2.png!q70.webp">
+							<p>家具日用</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t23881/99/904689968/389194/d2b76eef/5b470766N54f9af9d.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									小熊宝宝行为养成绘本系列全10册 儿童情绪管理与培养绘本 0-3岁好习惯养成儿童睡前故事绘本
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>14</big>.80</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t1/305/28/8815/389595/5ba9e375E07af1c0b/9fec580b99c8f77f.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									得力（deli）8308 A4 透明按扣文件袋白色 10只装  办公用品
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼151件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s400x400_jfs/t1/8663/18/1578/378644/5bced68eE762e7656/e81bb5d5097673e5.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									【第二件五折】汽车头枕颈枕 四季车用靠枕 车载枕头 脖子护枕 内饰用品 黑色【单个装】第二件五折
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼2335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t22477/99/2424683618/91114/898fb85/5b7f617dN9c519ba9.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									思维导图伴你学小学 语文数学英语知识清单 小学生思维训练
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>26</big>.00</small>
+									<p>已拼46件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t20707/22/1623805600/176834/f5b0b793/5b72ef83N3f755a72.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									汽车拖车绳3米3吨双层加厚 汽车小车救援车用拉车强力牵引绳子强力拖车带 拖车绳 单条
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼272件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t16642/74/1083633081/131426/d1e7326b/5abb2f0aN97614258.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									迈升 行驶证驾驶证皮套驾照本超薄女款男士机动车行车证多功能二合一证件包摩托车驾照夹一体包汽车用品 驾驶证、行驶证（二合一）
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>6</big>.80</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 配饰布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img13.360buyimg.com/jdphoto/s72x72_jfs/t18751/254/660826817/25820/18061401/5a9e5b49Ncf0fe029.png!q70.webp">
+							<p>钟表</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img14.360buyimg.com/jdphoto/jfs/t26788/344/475617215/3156/47df6564/5baf3d95Nbc2b652f.jpg!q70.dpg">
+							<p>礼品鲜花</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/jfs/t16438/320/2419856303/23663/9d0f6e06/5aa7a21cN1047b5bc.png!q70.webp">
+							<p>潮流搭配</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img20.360buyimg.com/jdphoto/s72x72_jfs/t18274/115/654837810/26274/f7c992cf/5a9e58b7N8bd3d874.png!q70.webp">
+							<p>饰品首饰</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t24763/65/765842771/169426/f9e747e4/5b7ace29N19d9f43a.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									束鹿故事 手套女触屏不倒绒时尚百搭保暖冬季手套耐磨防风防寒加绒加厚学生冬天开车骑车手套 断刀毛球-豆沙色 均码
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>24</big>.00</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t24994/99/2621060457/442468/4ca3ffd9/5bea2c3bNacb922cb.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									口罩男潮款个性女韩版儿童明星防尘透气可清洗易呼吸防尘秋冬季透气黑色 黑色鹿晗同款口罩6件
+                            
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>16</big>.90</small>
+									<p>已拼697件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t25141/334/794963633/216385/994febbb/5b7cbcf9N894b37c8.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									昆仑子玉平安扣男女款玉吊坠吊坠戴绳子男吊坠玉项链
+                            
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>19</big>.90</small>
+									<p>已拼335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t1/1204/32/15110/114330/5bdd6a93Ef589cf50/dd342ed11966a86a.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									万火比心猪 生日礼物 女生圣诞节礼物抖音同款创意实用送情侣闺蜜女友男朋友老婆的创意七彩硅胶拍拍小夜灯 拍拍款
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>48</big>.00</small>
+									<p>已拼461件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t5275/172/13039233/266636/98f27700/58f700a5N060544ed.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									恒源祥春秋冬季新款女士羊毛围巾加厚保暖女冬季羊羔绒大披肩加厚两用纯色长款围脖 LWL100-9988-1大红- 200*7
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>188</big>.00</small>
+									<p>已拼62件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t25519/87/1765101666/522910/9a548da8/5bbbc0edN451d08c2.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									个性流行可爱小熊耳钉女气质甜美耳饰品日韩简约配饰品 可爱小熊人工锆石耳钉
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>19</big>.90</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 生活布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t21799/268/561271024/9161/b3a9c067/5b114305N47a96582.png!q70.webp">
+							<p>图书音像</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t20134/260/592502637/7519/37244baf/5b114381Ne689e523.png!q70.webp">
+							<p>绿植宠物</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img30.360buyimg.com/jdphoto/s72x72_jfs/t20089/154/994798366/10075/78972604/5b11432dNcf77b60d.png!q70.webp">
+							<p>办公文具</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t20002/343/1009756681/8371/ff9f8c9/5b1142b4N33af7eac.png!q70.webp">
+							<p>汽车用品</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t6010/111/5204328675/225582/16e58527/5969cfffNce23b956.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									小熊宝宝行为养成绘本系列全10册 儿童情绪管理与培养绘本 0-3岁好习惯养成儿童睡前故事绘本
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>14</big>.80</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t24907/218/2672021306/168314/3f222c27/5bed3497N202df28f.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									得力（deli）8308 A4 透明按扣文件袋白色 10只装  办公用品
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼151件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t1/10090/19/3245/134241/5be2f7dcEc952131c/c67a6ea7ae83f233.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									【第二件五折】汽车头枕颈枕 四季车用靠枕 车载枕头 脖子护枕 内饰用品 黑色【单个装】第二件五折
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼2335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t21571/361/2373513340/150767/ce2a340c/5b52beffNc5028647.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									思维导图伴你学小学 语文数学英语知识清单 小学生思维训练
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>26</big>.00</small>
+									<p>已拼46件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t1/10167/2/2065/200185/5bdff032Ed39b366a/f30d2dcab111b7f1.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									汽车拖车绳3米3吨双层加厚 汽车小车救援车用拉车强力牵引绳子强力拖车带 拖车绳 单条
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼272件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t24712/332/2010609893/93346/2ed69f7a/5bc16b56N7beadfcf.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									迈升 行驶证驾驶证皮套驾照本超薄女款男士机动车行车证多功能二合一证件包摩托车驾照夹一体包汽车用品 驾驶证、行驶证（二合一）
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>6</big>.80</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 家电布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t18226/13/658999798/4703/648c9b30/5a9e48d1Nc98464ec.png!q70.webp">
+							<p>个护健康</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img30.360buyimg.com/jdphoto/s72x72_jfs/t15691/284/2294357191/7227/5afca930/5a9e493dN0cc020ce.png!q70.webp">
+							<p>生活电器</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t17443/98/654562153/6685/810b7f41/5a9e4a58N9cf2eac4.png!q70.webp">
+							<p>大家电</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img13.360buyimg.com/jdphoto/s72x72_jfs/t15034/211/2419261299/8146/3f8f779c/5a9e499dN485f67a1.png!q70.webp">
+							<p>厨房小电</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t23530/195/2138311966/174621/2c4f56e/5b7512d6Nc573a9df.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									小熊宝宝行为养成绘本系列全10册 儿童情绪管理与培养绘本 0-3岁好习惯养成儿童睡前故事绘本
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>14</big>.80</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t24007/17/1727033728/406745/682dfc1c/5b681772N41a0fe3e.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									得力（deli）8308 A4 透明按扣文件袋白色 10只装  办公用品
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼151件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t18307/348/1519288262/200024/e56a4fea/5acddd65N7459dfca.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									【第二件五折】汽车头枕颈枕 四季车用靠枕 车载枕头 脖子护枕 内饰用品 黑色【单个装】第二件五折
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼2335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t25201/239/106539919/230052/71a8200c/5b6569cbN4d5cc656.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									思维导图伴你学小学 语文数学英语知识清单 小学生思维训练
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>26</big>.00</small>
+									<p>已拼46件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t24661/102/2243357370/200136/d45f7f6f/5bee30a7N881dc54b.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									汽车拖车绳3米3吨双层加厚 汽车小车救援车用拉车强力牵引绳子强力拖车带 拖车绳 单条
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼272件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t11365/304/390408552/401997/5e4c3eb6/59eef649N6cf52425.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									迈升 行驶证驾驶证皮套驾照本超薄女款男士机动车行车证多功能二合一证件包摩托车驾照夹一体包汽车用品 驾驶证、行驶证（二合一）
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>6</big>.80</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 日用布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t20248/277/544990030/2392/b629e28d/5b11376fN80027345.jpg!q70.dpg">
+							<p>洗发护发</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t20347/72/583580697/2398/b9072860/5b113708N2f1575a5.jpg!q70.dpg">
+							<p>清洁用品</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img20.360buyimg.com/jdphoto/s72x72_jfs/t22363/131/554661914/7160/9632fd9a/5b11368cNf3c53263.png!q70.webp">
+							<p>纸巾湿巾</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img13.360buyimg.com/jdphoto/jfs/t17164/289/764689575/28116/99aa80bd/5aa7a1e4Nad3751f2.png!q70.webp">
+							<p>家具日用</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t23881/99/904689968/389194/d2b76eef/5b470766N54f9af9d.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									小熊宝宝行为养成绘本系列全10册 儿童情绪管理与培养绘本 0-3岁好习惯养成儿童睡前故事绘本
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>14</big>.80</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t1/305/28/8815/389595/5ba9e375E07af1c0b/9fec580b99c8f77f.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									得力（deli）8308 A4 透明按扣文件袋白色 10只装  办公用品
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼151件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s400x400_jfs/t1/8663/18/1578/378644/5bced68eE762e7656/e81bb5d5097673e5.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									【第二件五折】汽车头枕颈枕 四季车用靠枕 车载枕头 脖子护枕 内饰用品 黑色【单个装】第二件五折
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼2335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t22477/99/2424683618/91114/898fb85/5b7f617dN9c519ba9.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									思维导图伴你学小学 语文数学英语知识清单 小学生思维训练
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>26</big>.00</small>
+									<p>已拼46件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t20707/22/1623805600/176834/f5b0b793/5b72ef83N3f755a72.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									汽车拖车绳3米3吨双层加厚 汽车小车救援车用拉车强力牵引绳子强力拖车带 拖车绳 单条
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼272件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t16642/74/1083633081/131426/d1e7326b/5abb2f0aN97614258.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									迈升 行驶证驾驶证皮套驾照本超薄女款男士机动车行车证多功能二合一证件包摩托车驾照夹一体包汽车用品 驾驶证、行驶证（二合一）
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>6</big>.80</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 配饰布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img13.360buyimg.com/jdphoto/s72x72_jfs/t18751/254/660826817/25820/18061401/5a9e5b49Ncf0fe029.png!q70.webp">
+							<p>钟表</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img14.360buyimg.com/jdphoto/jfs/t26788/344/475617215/3156/47df6564/5baf3d95Nbc2b652f.jpg!q70.dpg">
+							<p>礼品鲜花</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/jfs/t16438/320/2419856303/23663/9d0f6e06/5aa7a21cN1047b5bc.png!q70.webp">
+							<p>潮流搭配</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img20.360buyimg.com/jdphoto/s72x72_jfs/t18274/115/654837810/26274/f7c992cf/5a9e58b7N8bd3d874.png!q70.webp">
+							<p>饰品首饰</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t24763/65/765842771/169426/f9e747e4/5b7ace29N19d9f43a.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									束鹿故事 手套女触屏不倒绒时尚百搭保暖冬季手套耐磨防风防寒加绒加厚学生冬天开车骑车手套 断刀毛球-豆沙色 均码
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>24</big>.00</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t24994/99/2621060457/442468/4ca3ffd9/5bea2c3bNacb922cb.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									口罩男潮款个性女韩版儿童明星防尘透气可清洗易呼吸防尘秋冬季透气黑色 黑色鹿晗同款口罩6件
+                            
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>16</big>.90</small>
+									<p>已拼697件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t25141/334/794963633/216385/994febbb/5b7cbcf9N894b37c8.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									昆仑子玉平安扣男女款玉吊坠吊坠戴绳子男吊坠玉项链
+                            
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>19</big>.90</small>
+									<p>已拼335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t1/1204/32/15110/114330/5bdd6a93Ef589cf50/dd342ed11966a86a.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									万火比心猪 生日礼物 女生圣诞节礼物抖音同款创意实用送情侣闺蜜女友男朋友老婆的创意七彩硅胶拍拍小夜灯 拍拍款
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>48</big>.00</small>
+									<p>已拼461件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t5275/172/13039233/266636/98f27700/58f700a5N060544ed.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									恒源祥春秋冬季新款女士羊毛围巾加厚保暖女冬季羊羔绒大披肩加厚两用纯色长款围脖 LWL100-9988-1大红- 200*7
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>188</big>.00</small>
+									<p>已拼62件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t25519/87/1765101666/522910/9a548da8/5bbbc0edN451d08c2.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									个性流行可爱小熊耳钉女气质甜美耳饰品日韩简约配饰品 可爱小熊人工锆石耳钉
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>19</big>.90</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 生活布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t21799/268/561271024/9161/b3a9c067/5b114305N47a96582.png!q70.webp">
+							<p>图书音像</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t20134/260/592502637/7519/37244baf/5b114381Ne689e523.png!q70.webp">
+							<p>绿植宠物</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img30.360buyimg.com/jdphoto/s72x72_jfs/t20089/154/994798366/10075/78972604/5b11432dNcf77b60d.png!q70.webp">
+							<p>办公文具</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t20002/343/1009756681/8371/ff9f8c9/5b1142b4N33af7eac.png!q70.webp">
+							<p>汽车用品</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t6010/111/5204328675/225582/16e58527/5969cfffNce23b956.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									小熊宝宝行为养成绘本系列全10册 儿童情绪管理与培养绘本 0-3岁好习惯养成儿童睡前故事绘本
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>14</big>.80</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t24907/218/2672021306/168314/3f222c27/5bed3497N202df28f.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									得力（deli）8308 A4 透明按扣文件袋白色 10只装  办公用品
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼151件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t1/10090/19/3245/134241/5be2f7dcEc952131c/c67a6ea7ae83f233.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									【第二件五折】汽车头枕颈枕 四季车用靠枕 车载枕头 脖子护枕 内饰用品 黑色【单个装】第二件五折
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼2335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t21571/361/2373513340/150767/ce2a340c/5b52beffNc5028647.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									思维导图伴你学小学 语文数学英语知识清单 小学生思维训练
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>26</big>.00</small>
+									<p>已拼46件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t1/10167/2/2065/200185/5bdff032Ed39b366a/f30d2dcab111b7f1.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									汽车拖车绳3米3吨双层加厚 汽车小车救援车用拉车强力牵引绳子强力拖车带 拖车绳 单条
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼272件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t24712/332/2010609893/93346/2ed69f7a/5bc16b56N7beadfcf.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									迈升 行驶证驾驶证皮套驾照本超薄女款男士机动车行车证多功能二合一证件包摩托车驾照夹一体包汽车用品 驾驶证、行驶证（二合一）
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>6</big>.80</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 家电布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t18226/13/658999798/4703/648c9b30/5a9e48d1Nc98464ec.png!q70.webp">
+							<p>个护健康</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img30.360buyimg.com/jdphoto/s72x72_jfs/t15691/284/2294357191/7227/5afca930/5a9e493dN0cc020ce.png!q70.webp">
+							<p>生活电器</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t17443/98/654562153/6685/810b7f41/5a9e4a58N9cf2eac4.png!q70.webp">
+							<p>大家电</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img13.360buyimg.com/jdphoto/s72x72_jfs/t15034/211/2419261299/8146/3f8f779c/5a9e499dN485f67a1.png!q70.webp">
+							<p>厨房小电</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t23530/195/2138311966/174621/2c4f56e/5b7512d6Nc573a9df.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									小熊宝宝行为养成绘本系列全10册 儿童情绪管理与培养绘本 0-3岁好习惯养成儿童睡前故事绘本
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>14</big>.80</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t24007/17/1727033728/406745/682dfc1c/5b681772N41a0fe3e.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									得力（deli）8308 A4 透明按扣文件袋白色 10只装  办公用品
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼151件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t18307/348/1519288262/200024/e56a4fea/5acddd65N7459dfca.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									【第二件五折】汽车头枕颈枕 四季车用靠枕 车载枕头 脖子护枕 内饰用品 黑色【单个装】第二件五折
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼2335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t25201/239/106539919/230052/71a8200c/5b6569cbN4d5cc656.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									思维导图伴你学小学 语文数学英语知识清单 小学生思维训练
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>26</big>.00</small>
+									<p>已拼46件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t24661/102/2243357370/200136/d45f7f6f/5bee30a7N881dc54b.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									汽车拖车绳3米3吨双层加厚 汽车小车救援车用拉车强力牵引绳子强力拖车带 拖车绳 单条
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼272件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t11365/304/390408552/401997/5e4c3eb6/59eef649N6cf52425.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									迈升 行驶证驾驶证皮套驾照本超薄女款男士机动车行车证多功能二合一证件包摩托车驾照夹一体包汽车用品 驾驶证、行驶证（二合一）
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>6</big>.80</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 日用布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t20248/277/544990030/2392/b629e28d/5b11376fN80027345.jpg!q70.dpg">
+							<p>洗发护发</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t20347/72/583580697/2398/b9072860/5b113708N2f1575a5.jpg!q70.dpg">
+							<p>清洁用品</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img20.360buyimg.com/jdphoto/s72x72_jfs/t22363/131/554661914/7160/9632fd9a/5b11368cNf3c53263.png!q70.webp">
+							<p>纸巾湿巾</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img13.360buyimg.com/jdphoto/jfs/t17164/289/764689575/28116/99aa80bd/5aa7a1e4Nad3751f2.png!q70.webp">
+							<p>家具日用</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t23881/99/904689968/389194/d2b76eef/5b470766N54f9af9d.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									小熊宝宝行为养成绘本系列全10册 儿童情绪管理与培养绘本 0-3岁好习惯养成儿童睡前故事绘本
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>14</big>.80</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t1/305/28/8815/389595/5ba9e375E07af1c0b/9fec580b99c8f77f.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									得力（deli）8308 A4 透明按扣文件袋白色 10只装  办公用品
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼151件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s400x400_jfs/t1/8663/18/1578/378644/5bced68eE762e7656/e81bb5d5097673e5.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									【第二件五折】汽车头枕颈枕 四季车用靠枕 车载枕头 脖子护枕 内饰用品 黑色【单个装】第二件五折
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼2335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t22477/99/2424683618/91114/898fb85/5b7f617dN9c519ba9.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									思维导图伴你学小学 语文数学英语知识清单 小学生思维训练
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>26</big>.00</small>
+									<p>已拼46件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t20707/22/1623805600/176834/f5b0b793/5b72ef83N3f755a72.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									汽车拖车绳3米3吨双层加厚 汽车小车救援车用拉车强力牵引绳子强力拖车带 拖车绳 单条
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼272件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t16642/74/1083633081/131426/d1e7326b/5abb2f0aN97614258.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									迈升 行驶证驾驶证皮套驾照本超薄女款男士机动车行车证多功能二合一证件包摩托车驾照夹一体包汽车用品 驾驶证、行驶证（二合一）
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>6</big>.80</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 配饰布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img13.360buyimg.com/jdphoto/s72x72_jfs/t18751/254/660826817/25820/18061401/5a9e5b49Ncf0fe029.png!q70.webp">
+							<p>钟表</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img14.360buyimg.com/jdphoto/jfs/t26788/344/475617215/3156/47df6564/5baf3d95Nbc2b652f.jpg!q70.dpg">
+							<p>礼品鲜花</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/jfs/t16438/320/2419856303/23663/9d0f6e06/5aa7a21cN1047b5bc.png!q70.webp">
+							<p>潮流搭配</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img20.360buyimg.com/jdphoto/s72x72_jfs/t18274/115/654837810/26274/f7c992cf/5a9e58b7N8bd3d874.png!q70.webp">
+							<p>饰品首饰</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t24763/65/765842771/169426/f9e747e4/5b7ace29N19d9f43a.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									束鹿故事 手套女触屏不倒绒时尚百搭保暖冬季手套耐磨防风防寒加绒加厚学生冬天开车骑车手套 断刀毛球-豆沙色 均码
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>24</big>.00</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t24994/99/2621060457/442468/4ca3ffd9/5bea2c3bNacb922cb.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									口罩男潮款个性女韩版儿童明星防尘透气可清洗易呼吸防尘秋冬季透气黑色 黑色鹿晗同款口罩6件
+                            
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>16</big>.90</small>
+									<p>已拼697件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t25141/334/794963633/216385/994febbb/5b7cbcf9N894b37c8.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									昆仑子玉平安扣男女款玉吊坠吊坠戴绳子男吊坠玉项链
+                            
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>19</big>.90</small>
+									<p>已拼335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t1/1204/32/15110/114330/5bdd6a93Ef589cf50/dd342ed11966a86a.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									万火比心猪 生日礼物 女生圣诞节礼物抖音同款创意实用送情侣闺蜜女友男朋友老婆的创意七彩硅胶拍拍小夜灯 拍拍款
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>48</big>.00</small>
+									<p>已拼461件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img13.360buyimg.com/evalpic/s500x500_jfs/t5275/172/13039233/266636/98f27700/58f700a5N060544ed.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									恒源祥春秋冬季新款女士羊毛围巾加厚保暖女冬季羊羔绒大披肩加厚两用纯色长款围脖 LWL100-9988-1大红- 200*7
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>188</big>.00</small>
+									<p>已拼62件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t25519/87/1765101666/522910/9a548da8/5bbbc0edN451d08c2.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									个性流行可爱小熊耳钉女气质甜美耳饰品日韩简约配饰品 可爱小熊人工锆石耳钉
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>19</big>.90</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 生活布局 -->
+			<div class="pubPageContain" >
+				<ul class="headmenu">
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t21799/268/561271024/9161/b3a9c067/5b114305N47a96582.png!q70.webp">
+							<p>图书音像</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t20134/260/592502637/7519/37244baf/5b114381Ne689e523.png!q70.webp">
+							<p>绿植宠物</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img30.360buyimg.com/jdphoto/s72x72_jfs/t20089/154/994798366/10075/78972604/5b11432dNcf77b60d.png!q70.webp">
+							<p>办公文具</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t20002/343/1009756681/8371/ff9f8c9/5b1142b4N33af7eac.png!q70.webp">
+							<p>汽车用品</p>
+						</a>
+					</li>
+				</ul>
+				<div class="sujest">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t6010/111/5204328675/225582/16e58527/5969cfffNce23b956.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									小熊宝宝行为养成绘本系列全10册 儿童情绪管理与培养绘本 0-3岁好习惯养成儿童睡前故事绘本
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>14</big>.80</small>
+									<p>已拼27件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t24907/218/2672021306/168314/3f222c27/5bed3497N202df28f.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									得力（deli）8308 A4 透明按扣文件袋白色 10只装  办公用品
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼151件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img14.360buyimg.com/evalpic/s500x500_jfs/t1/10090/19/3245/134241/5be2f7dcEc952131c/c67a6ea7ae83f233.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									【第二件五折】汽车头枕颈枕 四季车用靠枕 车载枕头 脖子护枕 内饰用品 黑色【单个装】第二件五折
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼2335件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t21571/361/2373513340/150767/ce2a340c/5b52beffNc5028647.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									思维导图伴你学小学 语文数学英语知识清单 小学生思维训练
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>26</big>.00</small>
+									<p>已拼46件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img10.360buyimg.com/evalpic/s500x500_jfs/t1/10167/2/2065/200185/5bdff032Ed39b366a/f30d2dcab111b7f1.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									汽车拖车绳3米3吨双层加厚 汽车小车救援车用拉车强力牵引绳子强力拖车带 拖车绳 单条
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>9</big>.90</small>
+									<p>已拼272件</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="image">
+									<img src="https://img12.360buyimg.com/evalpic/s500x500_jfs/t24712/332/2010609893/93346/2ed69f7a/5bc16b56N7beadfcf.jpg!q70.dpg">
+								</div>
+								<div class="name">
+									迈升 行驶证驾驶证皮套驾照本超薄女款男士机动车行车证多功能二合一证件包摩托车驾照夹一体包汽车用品 驾驶证、行驶证（二合一）
+								</div>
+								<div class="price">
+									<span>2人拼</span>
+									<small>￥<big>6</big>.80</small>
+									<p>已拼315件</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+    </div>
+</body>
+</html>

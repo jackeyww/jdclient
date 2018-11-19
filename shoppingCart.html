@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="https://m.jd.com/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="style/shoppingcart.css">
+	<script src="js/collection.js"></script>
+	<title>购物车</title>
+	<script type="text/javascript">
+		var pixelRatio = 1 / window.devicePixelRatio;    //还原设备的真实分辨率；  
+		//devicePixelRatio设备的像素比；     
+		document.write('<meta name="viewport" content="width=device-width,initial-scale='+pixelRatio+',minimum-scale='+pixelRatio+',maximum-scale='+pixelRatio+'" />');
+		var html=document.getElementsByTagName('html')[0];
+		var pageWidth=html.getBoundingClientRect().width;
+		html.style.fontSize=pageWidth/10+"px";
+	</script>
+</head>
+<body>
+	<header class="head">
+		<a href="javascript:history.go(-1);" class="back"></a>
+		<p>购物车</p>
+		<a href="javascript:;" class="menu"></a>
+	</header>
+	<ul class="windowMenu">
+    	<li>
+    		<a href="index.html">
+    			<img src="img/winmenu1.png">
+    			<span>首页</span>
+    		</a>
+    	</li>
+    	<li>
+    		<a href="classify.html">
+    			<img src="img/winmenu2.png">
+    			<span>分类搜索</span>
+    		</a>
+    	</li>
+    	<li>
+    		<a href="shoppingCart.html">
+    			<img src="img/winmenu3.png">
+    			<span>购物车</span>
+    		</a>
+    	</li>
+    	<li>
+    		<a href="login.html">
+    			<img src="img/winmenu4.png">
+    			<span>我的京东</span>
+    		</a>
+    	</li>
+    	<li>
+    		<a href="#">
+    			<img src="img/winmenu5.png">    			
+    			<span>浏览记录</span>
+    		</a>
+    	</li>
+    </ul>
+	<div class="shoplist">
+		<img src="img/shopcar.png">
+		<p>登录后可同步购物车中商品</p>
+		<a href="login.html">登录</a>
+	</div>
+	<div class="libao">
+		<div class="youhui">
+			<div>
+				<i class="img1"></i>
+				<span>恭喜获得</span>
+				<small></small>
+				<span>专属优惠礼包</span>
+				<i class="img2"></i>
+			</div>
+			<a href="login.html">一键领取</a>
+		</div>
+
+		<ul class="yhuiquan">
+			<li>
+				<span class="shadow">东券</span>
+				<div class="price">
+					<i>￥</i>
+					<span>8</span>
+				</div>
+				<h6>全品类可用</h6>
+				<p>满120可用</p>
+			</li>
+			<li>
+				<span class="shadow">东券</span>
+				<div class="price">
+					<i>￥</i>
+					<span class="price2">12</span>
+				</div>
+				<h6 class="All">全品类可用</h6>
+				<p>满150可用</p>
+			</li>
+			<li>
+				<span class="shadow">运费</span>
+				<div class="price">
+					<i>￥</i>
+					<span>8</span>
+				</div>
+				<h6>运费券</h6>
+				<p class="yunfeiquan">满0可用</p>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="title">
+		京东秒杀
+	</div>
+	<div class="miaosha">
+		<div class="detail">
+			<a href="#">
+				<h5>京东秒杀</h5>
+				<h6>10点场</h6>
+				<div class="time">
+					<span class="hour">00</span><small>:</small>
+					<span class="minute">14</span><small>:</small>
+					<span class="second">23</span>
+				</div>
+				<i></i>
+			</a>
+		</div>
+		<div class="scrollMenuContainer">
+			<ul class="scrollMenu">
+				<li>
+					<a href="#">
+						<img src="https://img10.360buyimg.com/mobilecms/jfs/t26335/360/249653890/224609/8ef0c870/5b8a695fN4010a194.jpg!q70.dpg">
+						<p class="newprice">￥4998.00</p>
+						<p class="oldprice">￥9999.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="https://img10.360buyimg.com/mobilecms/jfs/t1/7067/20/6790/115906/5be24a23Ea9aa0dcc/275beaa4a28aadbf.jpg!q70.dpg">
+						<p class="newprice">￥49.00</p>
+						<p class="oldprice">￥78.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="https://img10.360buyimg.com/mobilecms/jfs/t28249/202/223219593/133216/8909cae1/5bebbbc4Nb4ce3910.jpg!q70.dpg">
+						<p class="newprice">￥2088.00</p>
+						<p class="oldprice">￥3399.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="https://img10.360buyimg.com/mobilecms/jfs/t26107/2/1539240387/62637/70e068cb/5be50614Nad18020f.jpg!q70.dpg">
+						<p class="newprice">￥128.00</p>
+						<p class="oldprice">￥149.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="https://img10.360buyimg.com/mobilecms/jfs/t30793/79/283508352/58569/57defcab/5bee7f36Nee45d390.jpg!q70.dpg">
+						<p class="newprice">￥159.00</p>
+						<p class="oldprice">￥219.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="https://img10.360buyimg.com/mobilecms/jfs/t27451/310/1529110669/500070/a88734de/5be51d06N5e238ba0.jpg!q70.dpg">
+						<p class="newprice">￥29.80</p>
+						<p class="oldprice">￥99.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="https://img10.360buyimg.com/mobilecms/jfs/t25231/137/2550497505/159956/a1e5697d/5be92a96Nc3357069.jpg!q70.dpg">
+						<p class="newprice">￥89.00</p>
+						<p class="oldprice">￥199.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="https://img10.360buyimg.com/mobilecms/jfs/t24877/216/2715056707/190481/84f5642f/5bed3dc9Nfc2d373c.jpg!q70.dpg">
+						<p class="newprice">￥49.00</p>
+						<p class="oldprice">￥159.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="https://img10.360buyimg.com/mobilecms/jfs/t23398/235/2335454461/241526/973ac0ce/5b7bd37eN19c8aa16.jpg!q70.dpg">
+						<p class="newprice">￥3198.00</p>
+						<p class="oldprice">￥3599.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="https://img10.360buyimg.com/mobilecms/jfs/t30439/161/159257974/167656/ae8a545b/5bea2d5dNf688fcd0.jpg!q70.dpg">
+						<p class="newprice">￥98.00</p>
+						<p class="oldprice">￥138.00</p>
+					</a>
+				</li>
+				<li>
+					<i></i><p>查看全部</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="title1">
+		可能你还想要
+	</div>
+	<div class="sujest">
+		<ul>
+			<li>
+				<div class="image">
+					<img src="https://img14.360buyimg.com/n7/jfs/t20530/40/758795677/597207/c08d8365/5b17917cN4b3f6e1c.png!q70">
+				</div>
+				<div class="name">
+					<img src="https://img12.360buyimg.com/jdphoto/s98x28_jfs/t16411/341/2502946085/2662/c4af0771/5aadf9daN1916b3f2.png!q70">
+					华为（HUAWEI） 【赠1年延保】 honor/荣耀畅玩7C 4G智能手机 
+				</div>
+				<div class="price">
+					<span>￥1199</span>
+					<h5>满减</h5>
+					<a href="#"></a>
+				</div>
+			</li>
+			<li>
+				<div class="image">
+					<img src="https://img14.360buyimg.com/n7/jfs/t27253/287/332184301/658668/9e170314/5b8f69e4Ndfd477da.png!q70">
+				</div>
+				<div class="name">
+					AUCS 电子荧光板一体式实木支架 花架LED广告牌宣传展示板发光黑板 26*37cm 实木台式桌面式 
+				</div>
+				<div class="price">
+					<span>￥79</span>
+					<h5>券</h5>
+					<a href="#"></a>
+				</div>
+			</li>
+			<li>
+				<div class="image">
+					<img src="https://img14.360buyimg.com/n7/jfs/t20341/115/793000180/415321/a261f796/5b1787e2N8f4bb8e1.png!q70">
+				</div>
+				<div class="name">
+					华为（HUAWEI） 【赠1年延保】 畅享8e 智能手机双卡双待手机 金色 3GB+32GB
+				</div>
+				<div class="price">
+					<span>￥899</span>
+					<h5>满减</h5>
+					<a href="#"></a>
+				</div>
+			</li>
+			<li>
+				<div class="image">
+					<img src="https://img14.360buyimg.com/n7/jfs/t4069/120/920360309/226564/bd3675d0/58623938N15b5e9f8.jpg!q70.dpg">
+				</div>
+				<div class="name">
+					歌德老酒行 湄窖 浓香型  1995年 38度 500ml*12瓶 整箱
+				</div>
+				<div class="price">
+					<span>￥1188</span>
+					<a href="#"></a>
+				</div>
+			</li>
+			<li>
+				<div class="image">
+					<img src="https://img14.360buyimg.com/n7/jfs/t26038/71/220643351/445524/6f2ae01a/5b6937fdNbb7e5d8f.jpg!q70.dpg">
+				</div>
+				<div class="name">
+					OPPO A5手机【分期免息】新品拍照手机大屏全网通 K1 R15x A3 A7x A57 A1款式 A5 幻镜蓝(3G+64G)
+				</div>
+				<div class="price">
+					<span>￥1299</span>
+					<a href="#"></a>
+				</div>
+			</li>
+			<li>
+				<div class="image">
+					<img src="https://img14.360buyimg.com/n7/jfs/t17953/77/1593579115/635360/a84c2b29/5ad17a4eN861430f5.jpg!q70.dpg">
+				</div>
+				<div class="name">
+					宇宙星空球玻璃琉璃吊坠男女项链情侣礼品手工创意饰品送礼物星球七夕 进口日本 
+				</div>
+				<div class="price">
+					<span>￥3315.2</span>
+					<h5>券</h5>
+					<a href="#"></a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
